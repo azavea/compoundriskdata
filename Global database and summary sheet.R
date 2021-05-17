@@ -22,6 +22,55 @@ librarian::shelf(
 ##
 #
 
+# PARSE COMMAND LINE ARGUMENTS --------------------------------------------
+risk_read_root = "https://raw.githubusercontent.com/ljonestz/compoundriskdata/master/Risk_sheets"
+data_read_root = "https://raw.githubusercontent.com/ljonestz/compoundriskdata/master/Indicator_dataset/"
+write_root = "Risk_sheets"
+
+args <- commandArgs(trailingOnly = TRUE)
+if (length(args) > 0) {
+  risk_read_root <- args[1]
+  data_read_root <- args[2]
+  write_root <- args[3]
+}
+
+remove_index <- function(df){
+    if ("X" %in% colnames(df)) {
+      df <- df %>% select(-X)
+    }
+    return(df)
+}
+
+read_risk_sheet <- function(file_name) {
+    df <- read.csv(file.path(risk_read_root, file_name)) %>%
+      select(-starts_with("Countryname"))
+    df <- remove_index(df)
+
+    return(df)
+}
+
+# Load risk sheets
+healthsheet <- read_risk_sheet("healthsheet.csv")
+foodsecurity <- read_risk_sheet("foodsecuritysheet.csv")
+#debtsheet <- read.csv(paste(risk_read_root, "debtsheet.csv"))
+fragilitysheet <- read_risk_sheet("fragilitysheet.csv")
+macrosheet <- read_risk_sheet("macrosheet.csv")
+Naturalhazardsheet <- read_risk_sheet("Naturalhazards.csv")
+Socioeconomic_sheet <- read_risk_sheet("Socioeconomic_sheet.csv")
+#acapssheet <- read_risk_sheet("acapssheet.csv")
+countrylist <- read.csv(file.path(data_read_root, "countrylist.csv")) %>%
+  select(Country, Countryname)
+
+
+# # Load risk sheets
+# healthsheet <- read.csv("Risk_sheets/healthsheet.csv")[,-1] # drops first column, X, which is row number
+# foodsecurity <- read.csv("Risk_sheets/foodsecuritysheet.csv")[,-1]
+# fragilitysheet <- read.csv("Risk_sheets/fragilitysheet.csv")[,-1]
+# macrosheet <- read.csv("Risk_sheets/macrosheet.csv")[,-1]
+# Naturalhazardsheet <- read.csv("Risk_sheets/Naturalhazards.csv")[,-1]
+# Socioeconomic_sheet <- read.csv("Risk_sheets/Socioeconomic_sheet.csv")[,-1]
+# countrylist <- read.csv("Indicator_dataset/countrylist.csv")[,-1]
+
 # CHANGE: Saving URL string as a variable, to more easily redirect CRM GitHub links
 # This is the reason for all of the `read.csv(paste0(github, ...))` changes
 github <- "https://raw.githubusercontent.com/bennotkin/compoundriskdata/master/"
@@ -51,7 +100,7 @@ globalrisk <- left_join(countrylist, healthsheet, by = c("Countryname", "Country
   drop_na(Country)
 
 # Write as csv
-write.csv(globalrisk, "Risk_sheets/Global_compound_risk_database.csv")
+write.csv(globalrisk, file.path(write_root, "Global_compound_risk_database.csv"))
 
 #
 ##
@@ -674,7 +723,7 @@ reliabilitysheet <- reliabilitysheet %>%
   arrange(Country)
 
 # Write as a csv file for the reliability sheet
-write.csv(reliabilitysheet, "Risk_sheets/reliabilitysheet.csv")
+write.csv(reliabilitysheet, file.path(write_root, "reliabilitysheet.csv"))
 
 #------------------------------—Combine the reliability sheet with the global database------------------------------------
 reliable <- reliabilitysheet %>%
@@ -683,8 +732,7 @@ reliable <- reliabilitysheet %>%
 globalrisk <- left_join(globalrisk, reliable, by = c("Countryname", "Country"))
 
 # Save database of all risk indicators (+ reliability scores)
-# CHANGE: Folder is actually named "Risk_sheets" not "Risk_Sheets"; capital S erroneously added at some point
-write.csv(globalrisk, "Risk_sheets/Global_compound_risk_database.csv")
+write.csv(globalrisk, file.path(write_root, "Global_compound_risk_database.csv"))
 
 #------------------------------—Combine the reliability sheet with the summary risk flag sheet-----------------------------
 reliable <- reliabilitysheet %>%
@@ -701,8 +749,7 @@ riskflags <- left_join(riskflags %>%
 
 # Write csv file of all risk flags (+reliability scores)
 
-# CHANGE: Folder is actually named "Risk_sheets" not "Risk_Sheets"; capital S erroneously added at some point
-write.csv(riskflags, "Risk_sheets/Compound_Risk_Flag_Sheets.csv")
+write.csv(riskflags, file.path(write_root, "Compound_Risk_Flag_Sheets.csv"))
 }
 
 # CHANGE: Excel code is no longer used.
