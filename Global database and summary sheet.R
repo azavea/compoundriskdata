@@ -20,17 +20,46 @@ librarian::shelf(
 ### ********************************************************************************************
 ##
 #
- 
+
+# PARSE COMMAND LINE ARGUMENTS --------------------------------------------
+risk_read_root = "https://raw.githubusercontent.com/ljonestz/compoundriskdata/master/Risk_sheets"
+data_read_root = "https://raw.githubusercontent.com/ljonestz/compoundriskdata/master/Indicator_dataset/"
+write_root = "Risk_sheets"
+
+args <- commandArgs(trailingOnly = TRUE)
+if (length(args) > 0) {
+  risk_read_root <- args[1]
+  data_read_root <- args[2]
+  write_root <- args[3]
+}
+
+remove_index <- function(df){
+    if ("X" %in% colnames(df)) {
+      df <- df %>% select(-X)
+    }
+    return(df)
+}
+
+read_risk_sheet <- function(file_name) {
+    df <- read.csv(file.path(risk_read_root, file_name)) %>%
+      select(-starts_with("Countryname"))
+    df <- remove_index(df)
+
+    return(df)
+}
+
 # Load risk sheets
-healthsheet <- read.csv("https://raw.githubusercontent.com/ljonestz/compoundriskdata/master/Risk_sheets/healthsheet.csv") %>% dplyr::select(-X)
-foodsecurity <- read.csv("https://raw.githubusercontent.com/ljonestz/compoundriskdata/master/Risk_sheets/foodsecuritysheet.csv") %>% dplyr::select(-X)
-#debtsheet <- read.csv("https://raw.githubusercontent.com/ljonestz/compoundriskdata/master/Risk_sheets/debtsheet.csv") %>% dplyr::select(-X)
-fragilitysheet <- read.csv("https://raw.githubusercontent.com/ljonestz/compoundriskdata/master/Risk_sheets/fragilitysheet.csv") %>% dplyr::select(-X)
-macrosheet <- read.csv("https://raw.githubusercontent.com/ljonestz/compoundriskdata/master/Risk_sheets/macrosheet.csv") %>% dplyr::select(-X)
-Naturalhazardsheet <- read.csv("https://raw.githubusercontent.com/ljonestz/compoundriskdata/master/Risk_sheets/Naturalhazards.csv") %>% dplyr::select(-X)
-Socioeconomic_sheet <- read.csv("https://raw.githubusercontent.com/ljonestz/compoundriskdata/master/Risk_sheets/Socioeconomic_sheet.csv") %>% dplyr::select(-X)
-#acapssheet <- read.csv("https://raw.githubusercontent.com/ljonestz/compoundriskdata/master/Risk_sheets/acapssheet.csv") %>% dplyr::select(-X)
-countrylist <- read.csv("https://raw.githubusercontent.com/ljonestz/compoundriskdata/master/Indicator_dataset/countrylist.csv") %>% dplyr::select(-X)
+healthsheet <- read_risk_sheet("healthsheet.csv")
+foodsecurity <- read_risk_sheet("foodsecuritysheet.csv")
+#debtsheet <- read.csv(paste(risk_read_root, "debtsheet.csv"))
+fragilitysheet <- read_risk_sheet("fragilitysheet.csv")
+macrosheet <- read_risk_sheet("macrosheet.csv")
+Naturalhazardsheet <- read_risk_sheet("Naturalhazards.csv")
+Socioeconomic_sheet <- read_risk_sheet("Socioeconomic_sheet.csv")
+#acapssheet <- read_risk_sheet("acapssheet.csv")
+countrylist <- read.csv(file.path(data_read_root, "countrylist.csv")) %>%
+  select(Country, Countryname)
+
 
 # # Load risk sheets
 # healthsheet <- read.csv("Risk_sheets/healthsheet.csv")[,-1] # drops first column, X, which is row number
@@ -43,20 +72,20 @@ countrylist <- read.csv("https://raw.githubusercontent.com/ljonestz/compoundrisk
 
 # Join datasets
 # — `globalrisk` ----
-globalrisk <- left_join(countrylist, healthsheet, by = c("Countryname", "Country")) %>%
-  left_join(., foodsecurity, by = c("Countryname", "Country")) %>%
-  # left_join(., debtsheet, by = c("Countryname", "Country")) %>%
-  left_join(., fragilitysheet, by = c("Countryname", "Country")) %>%
-  left_join(., macrosheet, by = c("Countryname", "Country")) %>%
-  left_join(., Naturalhazardsheet, by = c("Countryname", "Country")) %>%
-  left_join(., Socioeconomic_sheet, by = c("Countryname", "Country")) %>%
-  # left_join(., acapssheet, by = c("Country", "Countryname")) %>%
+globalrisk <- left_join(countrylist, healthsheet, by = "Country") %>%
+  left_join(., foodsecurity, by = "Country") %>%
+  # left_join(., debtsheet, by = "Country") %>%
+  left_join(., fragilitysheet, by = "Country") %>%
+  left_join(., macrosheet, by =  "Country") %>%
+  left_join(., Naturalhazardsheet, by = "Country") %>%
+  left_join(., Socioeconomic_sheet, by = "Country") %>%
+  # left_join(., acapssheet, by = "Country") %>%
   #dplyr::select(-X.x, -X.y, -X.x.x, -X.y.y, -X.x.x.x, -X) %>%
   distinct(Country, .keep_all = TRUE) %>%
   drop_na(Country)
 
 # Write as csv
-write.csv(globalrisk, "Risk_sheets/Global_compound_risk_database.csv")
+write.csv(globalrisk, file.path(write_root, "Global_compound_risk_database.csv"))
 
 #
 ##
@@ -676,7 +705,7 @@ reliabilitysheet <- reliabilitysheet %>%
   arrange(Country)
 
 # Write as a csv file for the reliability sheet
-write.csv(reliabilitysheet, "Risk_sheets/reliabilitysheet.csv")
+write.csv(reliabilitysheet, file.path(write_root, "reliabilitysheet.csv"))
 
 #------------------------------—Combine the reliability sheet with the global database------------------------------------
 reliable <- reliabilitysheet %>%
@@ -685,7 +714,7 @@ reliable <- reliabilitysheet %>%
 globalrisk <- left_join(globalrisk, reliable, by = c("Countryname", "Country"))
 
 # Save database of all risk indicators (+ reliability scores)
-write.csv(globalrisk, "Risk_Sheets/Global_compound_risk_database.csv")
+write.csv(globalrisk, file.path(write_root, "Global_compound_risk_database.csv"))
 
 #------------------------------—Combine the reliability sheet with the summary risk flag sheet-----------------------------
 reliable <- reliabilitysheet %>%
@@ -702,7 +731,7 @@ riskflags <- left_join(riskflags %>%
 
 # Write csv file of all risk flags (+reliability scores)
 
-write.csv(riskflags, "Risk_Sheets/Compound_Risk_Flag_Sheets.csv")
+write.csv(riskflags, file.path(write_root, "Compound_Risk_Flag_Sheets.csv"))
 }
 # 
 # #
