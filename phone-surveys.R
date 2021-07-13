@@ -15,16 +15,21 @@
 
 phone_data <- read_excel("/Users/bennotkin/Downloads/Phone_surveys_June.xlsx",
                          sheet = "2. Harmonized Indicators")
-
+  
 phone_compile <- phone_data %>%
-  filter(level_data == "Gender=All, urban_rural=National. sector=All") %>%
+  filter(level_data == "Gender=All, Urb_rur=National. sector=All") %>%
   mutate(survey_no = as.numeric(as.character(str_replace(wave, "WAVE", "")))) %>%
   group_by(code) %>%
   mutate(last_survey = max(survey_no, na.rm=T)) %>%
   ungroup() %>%
-  filter(last_survey == survey_no) 
-  
-phone_data <- phone_compile %>%
+  filter(last_survey == survey_no) %>% 
+  # Two values for "% able to access [staple food item] in the past 7 days when needed? - any staple food"
+  # Drop "Able to access any staple food in the past 7 days - first 3 staple food items (% of HHs)"
+  filter(indicator_display != "Able to access any staple food in the past 7 days - first 3 staple food items (% of HHs)")
+
+phone_unique <- phone_compile %>% distinct(code, indicator_description, .keep_all = T)
+
+phone_data <- phone_unique %>%
   dplyr::select(code, indicator_description, indicator_val) %>%
   pivot_wider(names_from = indicator_description, values_from = indicator_val  )
 
@@ -71,3 +76,5 @@ phone_index_data <- phone_index %>%
   )
 
 phone_index_data <- normfuncpos(phone_index_data, 7, 0, "S_phone_average_index")
+
+write.csv(phone_index_data, "Indicator_dataset/phone.csv")
