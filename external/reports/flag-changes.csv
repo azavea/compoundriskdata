@@ -1,571 +1,571 @@
-"","Index","Countryname","Country","Outlook","Count","Previous Count","Flag Change"
-"1",1,"Afghanistan","AFG","Overall",4.5,4.5,0
-"2",8,"Afghanistan","AFG","Underlying",3.5,3.5,0
-"3",22,"Afghanistan","AFG","Emerging",3.5,3.5,0
-"4",53,"Angola","AGO","Overall",4.5,4.5,0
-"5",60,"Angola","AGO","Underlying",2.5,2.5,0
-"6",74,"Angola","AGO","Emerging",3,3,0
-"7",105,"Albania","ALB","Overall",1.5,1.5,0
-"8",112,"Albania","ALB","Underlying",0.5,0.5,0
-"9",126,"Albania","ALB","Emerging",2,2,0
-"10",157,"United Arab Emirates","ARE","Overall",0.5,0.5,0
-"11",164,"United Arab Emirates","ARE","Underlying",0,0,0
-"12",178,"United Arab Emirates","ARE","Emerging",1.5,1.5,0
-"13",209,"Argentina","ARG","Overall",1.5,1.5,0
-"14",216,"Argentina","ARG","Underlying",1,1,0
-"15",230,"Argentina","ARG","Emerging",3,3,0
-"16",261,"Armenia","ARM","Overall",0.5,0.5,0
-"17",268,"Armenia","ARM","Underlying",0,0,0
-"18",282,"Armenia","ARM","Emerging",1,1,0
-"19",313,"Antigua and Barbuda","ATG","Overall",0,0,0
-"20",320,"Antigua and Barbuda","ATG","Underlying",0.5,0.5,0
-"21",334,"Antigua and Barbuda","ATG","Emerging",0,0,0
-"22",365,"Australia","AUS","Overall",0,0,0
-"23",372,"Australia","AUS","Underlying",0,0,0
-"24",386,"Australia","AUS","Emerging",0.5,0.5,0
-"25",417,"Austria","AUT","Overall",0,0,0
-"26",424,"Austria","AUT","Underlying",0,0,0
-"27",438,"Austria","AUT","Emerging",1,1,0
-"28",469,"Azerbaijan","AZE","Overall",2.5,2,0.5
-"29",476,"Azerbaijan","AZE","Underlying",1,1,0
-"30",490,"Azerbaijan","AZE","Emerging",2.5,2,0.5
-"31",521,"Burundi","BDI","Overall",4,4,0
-"32",528,"Burundi","BDI","Underlying",4.5,4.5,0
-"33",542,"Burundi","BDI","Emerging",1,1,0
-"34",573,"Belgium","BEL","Overall",0,0,0
-"35",580,"Belgium","BEL","Underlying",0,0,0
-"36",594,"Belgium","BEL","Emerging",2,2,0
-"37",625,"Benin","BEN","Overall",2,2,0
-"38",632,"Benin","BEN","Underlying",1.5,1.5,0
-"39",646,"Benin","BEN","Emerging",1.5,1.5,0
-"40",677,"Burkina Faso","BFA","Overall",4,4,0
-"41",684,"Burkina Faso","BFA","Underlying",3,3,0
-"42",698,"Burkina Faso","BFA","Emerging",2.5,2.5,0
-"43",729,"Bangladesh","BGD","Overall",2.5,2.5,0
-"44",736,"Bangladesh","BGD","Underlying",2,2,0
-"45",750,"Bangladesh","BGD","Emerging",3,3,0
-"46",781,"Bulgaria","BGR","Overall",0.5,0.5,0
-"47",788,"Bulgaria","BGR","Underlying",0,0,0
-"48",802,"Bulgaria","BGR","Emerging",0.5,0.5,0
-"49",833,"Bahrain","BHR","Overall",2,2,0
-"50",840,"Bahrain","BHR","Underlying",0,0,0
-"51",854,"Bahrain","BHR","Emerging",1.5,1.5,0
-"52",885,"Bahamas","BHS","Overall",1.5,1,0.5
-"53",892,"Bahamas","BHS","Underlying",0.5,0.5,0
-"54",906,"Bahamas","BHS","Emerging",1.5,1,0.5
-"55",937,"Bosnia and Herzegovina","BIH","Overall",1.5,1.5,0
-"56",944,"Bosnia and Herzegovina","BIH","Underlying",0,0,0
-"57",958,"Bosnia and Herzegovina","BIH","Emerging",2.5,2.5,0
-"58",989,"Belarus","BLR","Overall",1.5,1.5,0
-"59",996,"Belarus","BLR","Underlying",0.5,0.5,0
-"60",1010,"Belarus","BLR","Emerging",1.5,1.5,0
-"61",1041,"Belize","BLZ","Overall",1.5,1.5,0
-"62",1048,"Belize","BLZ","Underlying",1,1,0
-"63",1062,"Belize","BLZ","Emerging",2,2,0
-"64",1093,"Bolivia","BOL","Overall",2.5,2.5,0
-"65",1100,"Bolivia","BOL","Underlying",1,1,0
-"66",1114,"Bolivia","BOL","Emerging",2,2,0
-"67",1145,"Brazil","BRA","Overall",2,2,0
-"68",1152,"Brazil","BRA","Underlying",0,0,0
-"69",1166,"Brazil","BRA","Emerging",2.5,2.5,0
-"70",1197,"Barbados","BRB","Overall",2,2,0
-"71",1204,"Barbados","BRB","Underlying",0.5,0.5,0
-"72",1218,"Barbados","BRB","Emerging",1.5,1.5,0
-"73",1249,"Brunei Darussalam","BRN","Overall",0.5,0.5,0
-"74",1256,"Brunei Darussalam","BRN","Underlying",0.5,0.5,0
-"75",1270,"Brunei Darussalam","BRN","Emerging",1,1,0
-"76",1301,"Bhutan","BTN","Overall",2,2,0
-"77",1308,"Bhutan","BTN","Underlying",0.5,0.5,0
-"78",1322,"Bhutan","BTN","Emerging",1.5,1.5,0
-"79",1353,"Botswana","BWA","Overall",2,2,0
-"80",1360,"Botswana","BWA","Underlying",0.5,0.5,0
-"81",1374,"Botswana","BWA","Emerging",1.5,2,-0.5
-"82",1405,"Central African Republic","CAF","Overall",5,5,0
-"83",1412,"Central African Republic","CAF","Underlying",4,4,0
-"84",1426,"Central African Republic","CAF","Emerging",3,3,0
-"85",1457,"Canada","CAN","Overall",0,0,0
-"86",1464,"Canada","CAN","Underlying",0,0,0
-"87",1478,"Canada","CAN","Emerging",1.5,1.5,0
-"88",1509,"Switzerland","CHE","Overall",0,0,0
-"89",1516,"Switzerland","CHE","Underlying",0,0,0
-"90",1530,"Switzerland","CHE","Emerging",0.5,0.5,0
-"91",1561,"Chile","CHL","Overall",1.5,1.5,0
-"92",1568,"Chile","CHL","Underlying",0.5,0.5,0
-"93",1582,"Chile","CHL","Emerging",2.5,2.5,0
-"94",1613,"China","CHN","Overall",1,1,0
-"95",1620,"China","CHN","Underlying",1,1,0
-"96",1634,"China","CHN","Emerging",2,2,0
-"97",1665,"Côte d'Ivoire","CIV","Overall",3,3,0
-"98",1672,"Côte d'Ivoire","CIV","Underlying",1.5,1.5,0
-"99",1686,"Côte d'Ivoire","CIV","Emerging",1.5,2.5,-1
-"100",1717,"Cameroon","CMR","Overall",4.5,4.5,0
-"101",1724,"Cameroon","CMR","Underlying",2.5,2.5,0
-"102",1738,"Cameroon","CMR","Emerging",3,3,0
-"103",1769,"Congo DR","COD","Overall",5,5,0
-"104",1776,"Congo DR","COD","Underlying",4.5,4.5,0
-"105",1790,"Congo DR","COD","Emerging",4.5,4.5,0
-"106",1821,"Congo","COG","Overall",4,3.5,0.5
-"107",1828,"Congo","COG","Underlying",3.5,3.5,0
-"108",1842,"Congo","COG","Emerging",2.5,2.5,0
-"109",1873,"Colombia","COL","Overall",3.5,3.5,0
-"110",1880,"Colombia","COL","Underlying",0.5,0.5,0
-"111",1894,"Colombia","COL","Emerging",3.5,3.5,0
-"112",1925,"Comoros","COM","Overall",0.5,0.5,0
-"113",1932,"Comoros","COM","Underlying",3,3,0
-"114",1946,"Comoros","COM","Emerging",0,0,0
-"115",1977,"Cabo Verde","CPV","Overall",1.5,1.5,0
-"116",1984,"Cabo Verde","CPV","Underlying",0.5,0.5,0
-"117",1998,"Cabo Verde","CPV","Emerging",0.5,0.5,0
-"118",2029,"Costa Rica","CRI","Overall",2.5,2.5,0
-"119",2036,"Costa Rica","CRI","Underlying",0.5,0.5,0
-"120",2050,"Costa Rica","CRI","Emerging",2.5,2.5,0
-"121",2081,"Cuba","CUB","Overall",2,2,0
-"122",2088,"Cuba","CUB","Underlying",1.5,1.5,0
-"123",2102,"Cuba","CUB","Emerging",2,2,0
-"124",2133,"Cyprus","CYP","Overall",1,1,0
-"125",2140,"Cyprus","CYP","Underlying",0,0,0
-"126",2154,"Cyprus","CYP","Emerging",1,1,0
-"127",2185,"Czech Republic","CZE","Overall",0.5,0.5,0
-"128",2192,"Czech Republic","CZE","Underlying",0,0,0
-"129",2206,"Czech Republic","CZE","Emerging",1.5,1.5,0
-"130",2237,"Germany","DEU","Overall",0,0,0
-"131",2244,"Germany","DEU","Underlying",0,0,0
-"132",2258,"Germany","DEU","Emerging",0,0,0
-"133",2289,"Djibouti","DJI","Overall",2,2,0
-"134",2296,"Djibouti","DJI","Underlying",2,2,0
-"135",2310,"Djibouti","DJI","Emerging",0,0,0
-"136",2341,"Dominica","DMA","Overall",1,1,0
-"137",2348,"Dominica","DMA","Underlying",0.5,0.5,0
-"138",2362,"Dominica","DMA","Emerging",0,0,0
-"139",2393,"Denmark","DNK","Overall",0,0,0
-"140",2400,"Denmark","DNK","Underlying",0,0,0
-"141",2414,"Denmark","DNK","Emerging",1.5,1.5,0
-"142",2445,"Dominican Republic","DOM","Overall",1.5,1.5,0
-"143",2452,"Dominican Republic","DOM","Underlying",0.5,0.5,0
-"144",2466,"Dominican Republic","DOM","Emerging",1,1,0
-"145",2497,"Algeria","DZA","Overall",2.5,2.5,0
-"146",2504,"Algeria","DZA","Underlying",1,1,0
-"147",2518,"Algeria","DZA","Emerging",1,1,0
-"148",2549,"Ecuador","ECU","Overall",3,3,0
-"149",2556,"Ecuador","ECU","Underlying",0.5,0.5,0
-"150",2570,"Ecuador","ECU","Emerging",3,3,0
-"151",2601,"Egypt","EGY","Overall",2,2,0
-"152",2608,"Egypt","EGY","Underlying",0,0,0
-"153",2622,"Egypt","EGY","Emerging",1.5,1.5,0
-"154",2653,"Eritrea","ERI","Overall",2,2,0
-"155",2660,"Eritrea","ERI","Underlying",3.5,3.5,0
-"156",2674,"Eritrea","ERI","Emerging",0.5,0.5,0
-"157",2705,"Spain","ESP","Overall",0,0,0
-"158",2712,"Spain","ESP","Underlying",0,0,0
-"159",2726,"Spain","ESP","Emerging",2,2,0
-"160",2757,"Estonia","EST","Overall",0.5,0.5,0
-"161",2764,"Estonia","EST","Underlying",0,0,0
-"162",2778,"Estonia","EST","Emerging",2,2,0
-"163",2809,"Ethiopia","ETH","Overall",5,5,0
-"164",2816,"Ethiopia","ETH","Underlying",3.5,3.5,0
-"165",2830,"Ethiopia","ETH","Emerging",2.5,2.5,0
-"166",2861,"Finland","FIN","Overall",0,0,0
-"167",2868,"Finland","FIN","Underlying",0,0,0
-"168",2882,"Finland","FIN","Emerging",2,2.5,-0.5
-"169",2913,"Fiji","FJI","Overall",1.5,1.5,0
-"170",2920,"Fiji","FJI","Underlying",0.5,0.5,0
-"171",2934,"Fiji","FJI","Emerging",2,2,0
-"172",2965,"France","FRA","Overall",0,0,0
-"173",2972,"France","FRA","Underlying",0,0,0
-"174",2986,"France","FRA","Emerging",1,1,0
-"175",3017,"Micronesia","FSM","Overall",0.5,0.5,0
-"176",3024,"Micronesia","FSM","Underlying",1.5,1.5,0
-"177",3038,"Micronesia","FSM","Emerging",0.5,0.5,0
-"178",3069,"Gabon","GAB","Overall",2,2,0
-"179",3076,"Gabon","GAB","Underlying",1,1,0
-"180",3090,"Gabon","GAB","Emerging",1,1,0
-"181",3121,"United Kingdom","GBR","Overall",0,0,0
-"182",3128,"United Kingdom","GBR","Underlying",0,0,0
-"183",3142,"United Kingdom","GBR","Emerging",2,2,0
-"184",3173,"Georgia","GEO","Overall",1.5,1,0.5
-"185",3180,"Georgia","GEO","Underlying",0,0,0
-"186",3194,"Georgia","GEO","Emerging",3,2.5,0.5
-"187",3225,"Ghana","GHA","Overall",3,3,0
-"188",3232,"Ghana","GHA","Underlying",1,1,0
-"189",3246,"Ghana","GHA","Emerging",2.5,2.5,0
-"190",3277,"Guinea","GIN","Overall",3.5,3.5,0
-"191",3284,"Guinea","GIN","Underlying",2.5,2.5,0
-"192",3298,"Guinea","GIN","Emerging",1.5,1.5,0
-"193",3329,"Gambia","GMB","Overall",3.5,3.5,0
-"194",3336,"Gambia","GMB","Underlying",2,2,0
-"195",3350,"Gambia","GMB","Emerging",2.5,1.5,1
-"196",3381,"Guinea-Bissau","GNB","Overall",1,1,0
-"197",3388,"Guinea-Bissau","GNB","Underlying",3,3,0
-"198",3402,"Guinea-Bissau","GNB","Emerging",0.5,0.5,0
-"199",3433,"Equatorial Guinea","GNQ","Overall",1.5,1.5,0
-"200",3440,"Equatorial Guinea","GNQ","Underlying",1.5,1.5,0
-"201",3454,"Equatorial Guinea","GNQ","Emerging",0,0,0
-"202",3485,"Greece","GRC","Overall",1,0.5,0.5
-"203",3492,"Greece","GRC","Underlying",0.5,0.5,0
-"204",3506,"Greece","GRC","Emerging",1.5,0.5,1
-"205",3537,"Grenada","GRD","Overall",0,0,0
-"206",3544,"Grenada","GRD","Underlying",0.5,0.5,0
-"207",3558,"Grenada","GRD","Emerging",0,0,0
-"208",3589,"Guatemala","GTM","Overall",3,3,0
-"209",3596,"Guatemala","GTM","Underlying",1.5,1.5,0
-"210",3610,"Guatemala","GTM","Emerging",1.5,1.5,0
-"211",3641,"Guyana","GUY","Overall",1,1,0
-"212",3648,"Guyana","GUY","Underlying",0.5,0.5,0
-"213",3662,"Guyana","GUY","Emerging",0.5,0.5,0
-"214",3693,"Honduras","HND","Overall",2.5,2.5,0
-"215",3700,"Honduras","HND","Underlying",1.5,1.5,0
-"216",3714,"Honduras","HND","Emerging",2,2,0
-"217",3745,"Croatia","HRV","Overall",0.5,0.5,0
-"218",3752,"Croatia","HRV","Underlying",0,0,0
-"219",3766,"Croatia","HRV","Emerging",2,2,0
-"220",3797,"Haiti","HTI","Overall",4,4,0
-"221",3804,"Haiti","HTI","Underlying",5,5,0
-"222",3818,"Haiti","HTI","Emerging",3,3,0
-"223",3849,"Hungary","HUN","Overall",0.5,0.5,0
-"224",3856,"Hungary","HUN","Underlying",0,0,0
-"225",3870,"Hungary","HUN","Emerging",1,1,0
-"226",3901,"Indonesia","IDN","Overall",2,2,0
-"227",3908,"Indonesia","IDN","Underlying",1,1,0
-"228",3922,"Indonesia","IDN","Emerging",2,1.5,0.5
-"229",3953,"India","IND","Overall",1.5,1.5,0
-"230",3960,"India","IND","Underlying",1.5,1.5,0
-"231",3974,"India","IND","Emerging",0.5,0.5,0
-"232",4005,"Ireland","IRL","Overall",0,0,0
-"233",4012,"Ireland","IRL","Underlying",0,0,0
-"234",4026,"Ireland","IRL","Emerging",1.5,1.5,0
-"235",4057,"Iran","IRN","Overall",3,2.5,0.5
-"236",4064,"Iran","IRN","Underlying",1.5,1.5,0
-"237",4078,"Iran","IRN","Emerging",2,1.5,0.5
-"238",4109,"Iraq","IRQ","Overall",3,3,0
-"239",4116,"Iraq","IRQ","Underlying",2.5,2.5,0
-"240",4130,"Iraq","IRQ","Emerging",2,2,0
-"241",4161,"Iceland","ISL","Overall",0,0,0
-"242",4168,"Iceland","ISL","Underlying",0,0,0
-"243",4182,"Iceland","ISL","Emerging",0.5,0.5,0
-"244",4213,"Israel","ISR","Overall",0.5,0.5,0
-"245",4220,"Israel","ISR","Underlying",0,0,0
-"246",4234,"Israel","ISR","Emerging",2.5,2.5,0
-"247",4265,"Italy","ITA","Overall",1,1,0
-"248",4272,"Italy","ITA","Underlying",0,0,0
-"249",4286,"Italy","ITA","Emerging",2,2,0
-"250",4317,"Jamaica","JAM","Overall",0.5,0.5,0
-"251",4324,"Jamaica","JAM","Underlying",1,1,0
-"252",4338,"Jamaica","JAM","Emerging",0,0,0
-"253",4369,"Jordan","JOR","Overall",2,2,0
-"254",4376,"Jordan","JOR","Underlying",0,0,0
-"255",4390,"Jordan","JOR","Emerging",2,2,0
-"256",4421,"Japan","JPN","Overall",0,0,0
-"257",4428,"Japan","JPN","Underlying",1,1,0
-"258",4442,"Japan","JPN","Emerging",0,0,0
-"259",4473,"Kazakhstan","KAZ","Overall",1.5,1.5,0
-"260",4480,"Kazakhstan","KAZ","Underlying",0,0,0
-"261",4494,"Kazakhstan","KAZ","Emerging",1.5,1,0.5
-"262",4525,"Kenya","KEN","Overall",4,4,0
-"263",4532,"Kenya","KEN","Underlying",2.5,2.5,0
-"264",4546,"Kenya","KEN","Emerging",3.5,3.5,0
-"265",4577,"Kyrgyzstan","KGZ","Overall",0.5,0.5,0
-"266",4584,"Kyrgyzstan","KGZ","Underlying",0,0,0
-"267",4598,"Kyrgyzstan","KGZ","Emerging",1.5,1.5,0
-"268",4629,"Cambodia","KHM","Overall",1,1,0
-"269",4636,"Cambodia","KHM","Underlying",2,2,0
-"270",4650,"Cambodia","KHM","Emerging",1,1,0
-"271",4681,"Kiribati","KIR","Overall",1.5,1.5,0
-"272",4688,"Kiribati","KIR","Underlying",2.5,2.5,0
-"273",4702,"Kiribati","KIR","Emerging",1,1,0
-"274",4733,"Saint Kitts and Nevis","KNA","Overall",0.5,1,-0.5
-"275",4740,"Saint Kitts and Nevis","KNA","Underlying",0.5,0.5,0
-"276",4754,"Saint Kitts and Nevis","KNA","Emerging",0,0.5,-0.5
-"277",4785,"Korea Republic of","KOR","Overall",1,0.5,0.5
-"278",4792,"Korea Republic of","KOR","Underlying",1.5,1.5,0
-"279",4806,"Korea Republic of","KOR","Emerging",0,0,0
-"280",4837,"Kuwait","KWT","Overall",0.5,0.5,0
-"281",4844,"Kuwait","KWT","Underlying",0,0,0
-"282",4858,"Kuwait","KWT","Emerging",1,1,0
-"283",4889,"Lao PDR","LAO","Overall",2,2,0
-"284",4896,"Lao PDR","LAO","Underlying",1,1,0
-"285",4910,"Lao PDR","LAO","Emerging",1,1,0
-"286",4941,"Lebanon","LBN","Overall",3.5,3.5,0
-"287",4948,"Lebanon","LBN","Underlying",3,3,0
-"288",4962,"Lebanon","LBN","Emerging",3.5,3.5,0
-"289",4993,"Liberia","LBR","Overall",3.5,4,-0.5
-"290",5000,"Liberia","LBR","Underlying",3,3,0
-"291",5014,"Liberia","LBR","Emerging",2,2.5,-0.5
-"292",5045,"Libya","LBY","Overall",3,3,0
-"293",5052,"Libya","LBY","Underlying",2,2,0
-"294",5066,"Libya","LBY","Emerging",2.5,2,0.5
-"295",5097,"Saint Lucia","LCA","Overall",0.5,0.5,0
-"296",5104,"Saint Lucia","LCA","Underlying",0,0,0
-"297",5118,"Saint Lucia","LCA","Emerging",0,0,0
-"298",5149,"Liechtenstein","LIE","Overall",0,0,0
-"299",5156,"Liechtenstein","LIE","Underlying",0,0,0
-"300",5170,"Liechtenstein","LIE","Emerging",0,0,0
-"301",5201,"Sri Lanka","LKA","Overall",1.5,1.5,0
-"302",5208,"Sri Lanka","LKA","Underlying",1,1,0
-"303",5222,"Sri Lanka","LKA","Emerging",0.5,0.5,0
-"304",5253,"Lesotho","LSO","Overall",3,3,0
-"305",5260,"Lesotho","LSO","Underlying",2,2,0
-"306",5274,"Lesotho","LSO","Emerging",1,0.5,0.5
-"307",5305,"Lithuania","LTU","Overall",0.5,0.5,0
-"308",5312,"Lithuania","LTU","Underlying",0,0,0
-"309",5326,"Lithuania","LTU","Emerging",1.5,1.5,0
-"310",5357,"Luxembourg","LUX","Overall",0.5,0.5,0
-"311",5364,"Luxembourg","LUX","Underlying",0,0,0
-"312",5378,"Luxembourg","LUX","Emerging",1.5,1.5,0
-"313",5409,"Latvia","LVA","Overall",0.5,0.5,0
-"314",5416,"Latvia","LVA","Underlying",0,0,0
-"315",5430,"Latvia","LVA","Emerging",1,1,0
-"316",5461,"Morocco","MAR","Overall",2,1.5,0.5
-"317",5468,"Morocco","MAR","Underlying",0,0,0
-"318",5482,"Morocco","MAR","Emerging",2.5,2,0.5
-"319",5513,"Moldova Republic of","MDA","Overall",2,2,0
-"320",5520,"Moldova Republic of","MDA","Underlying",0,0,0
-"321",5534,"Moldova Republic of","MDA","Emerging",1.5,1.5,0
-"322",5565,"Madagascar","MDG","Overall",4.5,4,0.5
-"323",5572,"Madagascar","MDG","Underlying",3.5,3.5,0
-"324",5586,"Madagascar","MDG","Emerging",2.5,2.5,0
-"325",5617,"Maldives","MDV","Overall",1,1,0
-"326",5624,"Maldives","MDV","Underlying",0.5,0.5,0
-"327",5638,"Maldives","MDV","Emerging",0.5,0.5,0
-"328",5669,"Mexico","MEX","Overall",1,1,0
-"329",5676,"Mexico","MEX","Underlying",0.5,0.5,0
-"330",5690,"Mexico","MEX","Emerging",0.5,0.5,0
-"331",5721,"Marshall Islands","MHL","Overall",0,0,0
-"332",5728,"Marshall Islands","MHL","Underlying",2.5,2.5,0
-"333",5742,"Marshall Islands","MHL","Emerging",0,0,0
-"334",5773,"North Macedonia","MKD","Overall",0,0,0
-"335",5780,"North Macedonia","MKD","Underlying",0,0,0
-"336",5794,"North Macedonia","MKD","Emerging",0,0,0
-"337",5825,"Mali","MLI","Overall",4,4,0
-"338",5832,"Mali","MLI","Underlying",3,3,0
-"339",5846,"Mali","MLI","Emerging",3,3,0
-"340",5877,"Malta","MLT","Overall",1,1,0
-"341",5884,"Malta","MLT","Underlying",0,0,0
-"342",5898,"Malta","MLT","Emerging",1,1,0
-"343",5929,"Myanmar","MMR","Overall",3.5,3.5,0
-"344",5936,"Myanmar","MMR","Underlying",4,4,0
-"345",5950,"Myanmar","MMR","Emerging",3,3,0
-"346",5981,"Montenegro","MNE","Overall",0,0,0
-"347",5988,"Montenegro","MNE","Underlying",0,0,0
-"348",6002,"Montenegro","MNE","Emerging",0,0,0
-"349",6033,"Mongolia","MNG","Overall",1,1,0
-"350",6040,"Mongolia","MNG","Underlying",0.5,0.5,0
-"351",6054,"Mongolia","MNG","Emerging",1.5,1.5,0
-"352",6085,"Mozambique","MOZ","Overall",4.5,4.5,0
-"353",6092,"Mozambique","MOZ","Underlying",4.5,4.5,0
-"354",6106,"Mozambique","MOZ","Emerging",3.5,3.5,0
-"355",6137,"Mauritania","MRT","Overall",3,3,0
-"356",6144,"Mauritania","MRT","Underlying",2.5,2.5,0
-"357",6158,"Mauritania","MRT","Emerging",1,1,0
-"358",6189,"Mauritius","MUS","Overall",1,1,0
-"359",6196,"Mauritius","MUS","Underlying",0.5,0.5,0
-"360",6210,"Mauritius","MUS","Emerging",2,2,0
-"361",6241,"Malawi","MWI","Overall",3,3,0
-"362",6248,"Malawi","MWI","Underlying",2.5,2.5,0
-"363",6262,"Malawi","MWI","Emerging",2,2,0
-"364",6293,"Malaysia","MYS","Overall",1,1,0
-"365",6300,"Malaysia","MYS","Underlying",0,0,0
-"366",6314,"Malaysia","MYS","Emerging",3,2.5,0.5
-"367",6345,"Namibia","NAM","Overall",2.5,2.5,0
-"368",6352,"Namibia","NAM","Underlying",1.5,1.5,0
-"369",6366,"Namibia","NAM","Emerging",2,2,0
-"370",6397,"Niger","NER","Overall",4,4,0
-"371",6404,"Niger","NER","Underlying",4,4,0
-"372",6418,"Niger","NER","Emerging",3,3,0
-"373",6449,"Nigeria","NGA","Overall",5,5,0
-"374",6456,"Nigeria","NGA","Underlying",3.5,3.5,0
-"375",6470,"Nigeria","NGA","Emerging",4.5,4,0.5
-"376",6501,"Nicaragua","NIC","Overall",2,2,0
-"377",6508,"Nicaragua","NIC","Underlying",1,1,0
-"378",6522,"Nicaragua","NIC","Emerging",2,2,0
-"379",6553,"Netherlands","NLD","Overall",0,0,0
-"380",6560,"Netherlands","NLD","Underlying",0,0,0
-"381",6574,"Netherlands","NLD","Emerging",2,1.5,0.5
-"382",6605,"Norway","NOR","Overall",0,0,0
-"383",6612,"Norway","NOR","Underlying",0,0,0
-"384",6626,"Norway","NOR","Emerging",0,0,0
-"385",6657,"Nepal","NPL","Overall",1.5,1.5,0
-"386",6664,"Nepal","NPL","Underlying",2,2,0
-"387",6678,"Nepal","NPL","Emerging",0.5,0.5,0
-"388",6709,"Nauru","NRU","Overall",0,0,0
-"389",6716,"Nauru","NRU","Underlying",0.5,0.5,0
-"390",6730,"Nauru","NRU","Emerging",0,0,0
-"391",6761,"New Zealand","NZL","Overall",0,0,0
-"392",6768,"New Zealand","NZL","Underlying",0,0,0
-"393",6782,"New Zealand","NZL","Emerging",0,0,0
-"394",6813,"Oman","OMN","Overall",1.5,1.5,0
-"395",6820,"Oman","OMN","Underlying",0,0,0
-"396",6834,"Oman","OMN","Emerging",2,2,0
-"397",6865,"Pakistan","PAK","Overall",4,4,0
-"398",6872,"Pakistan","PAK","Underlying",2.5,2.5,0
-"399",6886,"Pakistan","PAK","Emerging",1.5,1.5,0
-"400",6917,"Panama","PAN","Overall",1.5,1.5,0
-"401",6924,"Panama","PAN","Underlying",0.5,0.5,0
-"402",6938,"Panama","PAN","Emerging",1.5,1.5,0
-"403",6969,"Peru","PER","Overall",1.5,1.5,0
-"404",6976,"Peru","PER","Underlying",1,1,0
-"405",6990,"Peru","PER","Emerging",4,4,0
-"406",7021,"Philippines","PHL","Overall",1.5,2.5,-1
-"407",7028,"Philippines","PHL","Underlying",1.5,1.5,0
-"408",7042,"Philippines","PHL","Emerging",1,2,-1
-"409",7073,"Palau","PLW","Overall",0,0,0
-"410",7080,"Palau","PLW","Underlying",0.5,0.5,0
-"411",7094,"Palau","PLW","Emerging",0,0,0
-"412",7125,"Papua New Guinea","PNG","Overall",3.5,3.5,0
-"413",7132,"Papua New Guinea","PNG","Underlying",3.5,3.5,0
-"414",7146,"Papua New Guinea","PNG","Emerging",1.5,1.5,0
-"415",7177,"Poland","POL","Overall",0.5,0.5,0
-"416",7184,"Poland","POL","Underlying",0,0,0
-"417",7198,"Poland","POL","Emerging",1.5,1.5,0
-"418",7229,"Korea DPR","PRK","Overall",1,1,0
-"419",7236,"Korea DPR","PRK","Underlying",2.5,2.5,0
-"420",7250,"Korea DPR","PRK","Emerging",1,1,0
-"421",7281,"Portugal","PRT","Overall",0.5,0.5,0
-"422",7288,"Portugal","PRT","Underlying",0,0,0
-"423",7302,"Portugal","PRT","Emerging",2.5,2,0.5
-"424",7333,"Paraguay","PRY","Overall",1.5,1.5,0
-"425",7340,"Paraguay","PRY","Underlying",0,0,0
-"426",7354,"Paraguay","PRY","Emerging",1.5,1.5,0
-"427",7385,"Qatar","QAT","Overall",0.5,0.5,0
-"428",7392,"Qatar","QAT","Underlying",0,0,0
-"429",7406,"Qatar","QAT","Emerging",1.5,1.5,0
-"430",7437,"Romania","ROU","Overall",0.5,0.5,0
-"431",7444,"Romania","ROU","Underlying",0,0,0
-"432",7458,"Romania","ROU","Emerging",0.5,0.5,0
-"433",7489,"Russian Federation","RUS","Overall",1.5,1,0.5
-"434",7496,"Russian Federation","RUS","Underlying",0.5,0.5,0
-"435",7510,"Russian Federation","RUS","Emerging",1,1,0
-"436",7541,"Rwanda","RWA","Overall",2,2,0
-"437",7548,"Rwanda","RWA","Underlying",1.5,1.5,0
-"438",7562,"Rwanda","RWA","Emerging",1.5,1.5,0
-"439",7593,"Saudi Arabia","SAU","Overall",0.5,0.5,0
-"440",7600,"Saudi Arabia","SAU","Underlying",0,0,0
-"441",7614,"Saudi Arabia","SAU","Emerging",1.5,1.5,0
-"442",7645,"Sudan","SDN","Overall",4.5,4.5,0
-"443",7652,"Sudan","SDN","Underlying",4,4,0
-"444",7666,"Sudan","SDN","Emerging",2.5,2.5,0
-"445",7697,"Senegal","SEN","Overall",2,2,0
-"446",7704,"Senegal","SEN","Underlying",1.5,1.5,0
-"447",7718,"Senegal","SEN","Emerging",3.5,3.5,0
-"448",7749,"Singapore","SGP","Overall",0,0,0
-"449",7756,"Singapore","SGP","Underlying",0,0,0
-"450",7770,"Singapore","SGP","Emerging",1,1,0
-"451",7801,"Solomon Islands","SLB","Overall",2,2,0
-"452",7808,"Solomon Islands","SLB","Underlying",3,3,0
-"453",7822,"Solomon Islands","SLB","Emerging",1,1,0
-"454",7853,"Sierra Leone","SLE","Overall",3,3.5,-0.5
-"455",7860,"Sierra Leone","SLE","Underlying",2.5,2.5,0
-"456",7874,"Sierra Leone","SLE","Emerging",2,3,-1
-"457",7905,"El Salvador","SLV","Overall",2,2,0
-"458",7912,"El Salvador","SLV","Underlying",0.5,0.5,0
-"459",7926,"El Salvador","SLV","Emerging",2,2,0
-"460",7957,"Somalia","SOM","Overall",5,5,0
-"461",7964,"Somalia","SOM","Underlying",4,4,0
-"462",7978,"Somalia","SOM","Emerging",4.5,4.5,0
-"463",8009,"Serbia","SRB","Overall",0.5,0.5,0
-"464",8016,"Serbia","SRB","Underlying",0,0,0
-"465",8030,"Serbia","SRB","Emerging",2,2,0
-"466",8061,"South Sudan","SSD","Overall",4,4,0
-"467",8068,"South Sudan","SSD","Underlying",4,4,0
-"468",8082,"South Sudan","SSD","Emerging",3.5,3.5,0
-"469",8113,"Sao Tome and Principe","STP","Overall",1.5,1.5,0
-"470",8120,"Sao Tome and Principe","STP","Underlying",2,2,0
-"471",8134,"Sao Tome and Principe","STP","Emerging",1,1,0
-"472",8165,"Suriname","SUR","Overall",1.5,1.5,0
-"473",8172,"Suriname","SUR","Underlying",0.5,0.5,0
-"474",8186,"Suriname","SUR","Emerging",1.5,1.5,0
-"475",8217,"Slovakia","SVK","Overall",0.5,0.5,0
-"476",8224,"Slovakia","SVK","Underlying",0,0,0
-"477",8238,"Slovakia","SVK","Emerging",1,1,0
-"478",8269,"Slovenia","SVN","Overall",0.5,0.5,0
-"479",8276,"Slovenia","SVN","Underlying",0,0,0
-"480",8290,"Slovenia","SVN","Emerging",1.5,1.5,0
-"481",8321,"Sweden","SWE","Overall",0,0,0
-"482",8328,"Sweden","SWE","Underlying",0,0,0
-"483",8342,"Sweden","SWE","Emerging",0.5,0.5,0
-"484",8373,"Eswatini","SWZ","Overall",2,2,0
-"485",8380,"Eswatini","SWZ","Underlying",1.5,1.5,0
-"486",8394,"Eswatini","SWZ","Emerging",1.5,1.5,0
-"487",8425,"Seychelles","SYC","Overall",1.5,1.5,0
-"488",8432,"Seychelles","SYC","Underlying",0.5,0.5,0
-"489",8446,"Seychelles","SYC","Emerging",1.5,1.5,0
-"490",8477,"Syria","SYR","Overall",5,5,0
-"491",8484,"Syria","SYR","Underlying",3.5,3.5,0
-"492",8498,"Syria","SYR","Emerging",3,3,0
-"493",8529,"Chad","TCD","Overall",4.5,4.5,0
-"494",8536,"Chad","TCD","Underlying",4,4,0
-"495",8550,"Chad","TCD","Emerging",2.5,2.5,0
-"496",8581,"Togo","TGO","Overall",1.5,1.5,0
-"497",8588,"Togo","TGO","Underlying",1.5,1.5,0
-"498",8602,"Togo","TGO","Emerging",1,1,0
-"499",8633,"Thailand","THA","Overall",0.5,0,0.5
-"500",8640,"Thailand","THA","Underlying",0.5,0.5,0
-"501",8654,"Thailand","THA","Emerging",0,0,0
-"502",8685,"Tajikistan","TJK","Overall",3,3,0
-"503",8692,"Tajikistan","TJK","Underlying",2,2,0
-"504",8706,"Tajikistan","TJK","Emerging",1.5,1.5,0
-"505",8737,"Turkmenistan","TKM","Overall",1,1,0
-"506",8744,"Turkmenistan","TKM","Underlying",1.5,1.5,0
-"507",8758,"Turkmenistan","TKM","Emerging",1,1,0
-"508",8789,"Timor-Leste","TLS","Overall",2,2,0
-"509",8796,"Timor-Leste","TLS","Underlying",2.5,2.5,0
-"510",8810,"Timor-Leste","TLS","Emerging",1,1.5,-0.5
-"511",8841,"Tonga","TON","Overall",3,3,0
-"512",8848,"Tonga","TON","Underlying",1.5,1.5,0
-"513",8862,"Tonga","TON","Emerging",1.5,1.5,0
-"514",8893,"Trinidad and Tobago","TTO","Overall",1,1,0
-"515",8900,"Trinidad and Tobago","TTO","Underlying",0,0,0
-"516",8914,"Trinidad and Tobago","TTO","Emerging",0.5,1,-0.5
-"517",8945,"Tunisia","TUN","Overall",2.5,2.5,0
-"518",8952,"Tunisia","TUN","Underlying",0.5,0.5,0
-"519",8966,"Tunisia","TUN","Emerging",3.5,3.5,0
-"520",8997,"Turkey","TUR","Overall",1,1,0
-"521",9004,"Turkey","TUR","Underlying",0.5,0.5,0
-"522",9018,"Turkey","TUR","Emerging",0.5,0.5,0
-"523",9049,"Tuvalu","TUV","Overall",0.5,0.5,0
-"524",9056,"Tuvalu","TUV","Underlying",2,2,0
-"525",9070,"Tuvalu","TUV","Emerging",1,1,0
-"526",9101,"Tanzania","TZA","Overall",2.5,2.5,0
-"527",9108,"Tanzania","TZA","Underlying",1.5,1.5,0
-"528",9122,"Tanzania","TZA","Emerging",1,1,0
-"529",9153,"Uganda","UGA","Overall",3,3,0
-"530",9160,"Uganda","UGA","Underlying",3,3,0
-"531",9174,"Uganda","UGA","Emerging",2.5,3,-0.5
-"532",9205,"Ukraine","UKR","Overall",1.5,1.5,0
-"533",9212,"Ukraine","UKR","Underlying",0.5,0.5,0
-"534",9226,"Ukraine","UKR","Emerging",1,1,0
-"535",9257,"Uruguay","URY","Overall",1,1,0
-"536",9264,"Uruguay","URY","Underlying",0,0,0
-"537",9278,"Uruguay","URY","Emerging",1.5,1.5,0
-"538",9309,"United States of America","USA","Overall",1,1,0
-"539",9316,"United States of America","USA","Underlying",0.5,0.5,0
-"540",9330,"United States of America","USA","Emerging",3.5,3.5,0
-"541",9361,"Uzbekistan","UZB","Overall",3,3,0
-"542",9368,"Uzbekistan","UZB","Underlying",2,2,0
-"543",9382,"Uzbekistan","UZB","Emerging",1,1,0
-"544",9413,"Saint Vincent and the Grenadines","VCT","Overall",0,0,0
-"545",9420,"Saint Vincent and the Grenadines","VCT","Underlying",0.5,0.5,0
-"546",9434,"Saint Vincent and the Grenadines","VCT","Emerging",0,0,0
-"547",9465,"Venezuela","VEN","Overall",4,4,0
-"548",9472,"Venezuela","VEN","Underlying",3,3,0
-"549",9486,"Venezuela","VEN","Emerging",2,2,0
-"550",9517,"Viet Nam","VNM","Overall",1.5,1.5,0
-"551",9524,"Viet Nam","VNM","Underlying",1,1,0
-"552",9538,"Viet Nam","VNM","Emerging",1,0.5,0.5
-"553",9569,"Vanuatu","VUT","Overall",2,2,0
-"554",9576,"Vanuatu","VUT","Underlying",2,2,0
-"555",9590,"Vanuatu","VUT","Emerging",1,1,0
-"556",9621,"Samoa","WSM","Overall",0,0,0
-"557",9628,"Samoa","WSM","Underlying",1,1,0
-"558",9642,"Samoa","WSM","Emerging",0,0,0
-"559",9673,"Yemen","YEM","Overall",3,3,0
-"560",9680,"Yemen","YEM","Underlying",4,4,0
-"561",9694,"Yemen","YEM","Emerging",3,3,0
-"562",9725,"South Africa","ZAF","Overall",2.5,2.5,0
-"563",9732,"South Africa","ZAF","Underlying",0,0,0
-"564",9746,"South Africa","ZAF","Emerging",3.5,3.5,0
-"565",9777,"Zambia","ZMB","Overall",3.5,3.5,0
-"566",9784,"Zambia","ZMB","Underlying",2.5,2.5,0
-"567",9798,"Zambia","ZMB","Emerging",2.5,2.5,0
-"568",9829,"Zimbabwe","ZWE","Overall",5,5,0
-"569",9836,"Zimbabwe","ZWE","Underlying",4,4,0
-"570",9850,"Zimbabwe","ZWE","Emerging",4,4,0
+"","Index","Record_ID","Prior Record_ID","Countryname","Country","Outlook","Date","Prior Date","Count","Prior Count","Flag Change"
+"1",1,108681,69161,"Afghanistan","AFG","Overall",2021-07-22,2021-07-21,4.5,4.5,0
+"2",8,108688,69168,"Afghanistan","AFG","Underlying",2021-07-22,2021-07-21,3.5,3.5,0
+"3",22,108702,69182,"Afghanistan","AFG","Emerging",2021-07-22,2021-07-21,3.5,3.5,0
+"4",53,108733,69213,"Angola","AGO","Overall",2021-07-22,2021-07-21,4,4,0
+"5",60,108740,69220,"Angola","AGO","Underlying",2021-07-22,2021-07-21,2.5,2.5,0
+"6",74,108754,69234,"Angola","AGO","Emerging",2021-07-22,2021-07-21,3,3,0
+"7",105,108785,69265,"Albania","ALB","Overall",2021-07-22,2021-07-21,1.5,1.5,0
+"8",112,108792,69272,"Albania","ALB","Underlying",2021-07-22,2021-07-21,0.5,0.5,0
+"9",126,108806,69286,"Albania","ALB","Emerging",2021-07-22,2021-07-21,2,2,0
+"10",157,108837,69317,"United Arab Emirates","ARE","Overall",2021-07-22,2021-07-21,0.5,0.5,0
+"11",164,108844,69324,"United Arab Emirates","ARE","Underlying",2021-07-22,2021-07-21,0,0,0
+"12",178,108858,69338,"United Arab Emirates","ARE","Emerging",2021-07-22,2021-07-21,1.5,1.5,0
+"13",209,108889,69369,"Argentina","ARG","Overall",2021-07-22,2021-07-21,1.5,1.5,0
+"14",216,108896,69376,"Argentina","ARG","Underlying",2021-07-22,2021-07-21,1,1,0
+"15",230,108910,69390,"Argentina","ARG","Emerging",2021-07-22,2021-07-21,3,3,0
+"16",261,108941,69421,"Armenia","ARM","Overall",2021-07-22,2021-07-21,0.5,0.5,0
+"17",268,108948,69428,"Armenia","ARM","Underlying",2021-07-22,2021-07-21,0,0,0
+"18",282,108962,69442,"Armenia","ARM","Emerging",2021-07-22,2021-07-21,1,1,0
+"19",313,108993,69473,"Antigua and Barbuda","ATG","Overall",2021-07-22,2021-07-21,0,0,0
+"20",320,109000,69480,"Antigua and Barbuda","ATG","Underlying",2021-07-22,2021-07-21,0.5,0.5,0
+"21",334,109014,69494,"Antigua and Barbuda","ATG","Emerging",2021-07-22,2021-07-21,0,0,0
+"22",365,109045,69525,"Australia","AUS","Overall",2021-07-22,2021-07-21,0,0,0
+"23",372,109052,69532,"Australia","AUS","Underlying",2021-07-22,2021-07-21,0,0,0
+"24",386,109066,69546,"Australia","AUS","Emerging",2021-07-22,2021-07-21,0.5,0.5,0
+"25",417,109097,69577,"Austria","AUT","Overall",2021-07-22,2021-07-21,0.5,0.5,0
+"26",424,109104,69584,"Austria","AUT","Underlying",2021-07-22,2021-07-21,0,0,0
+"27",438,109118,69598,"Austria","AUT","Emerging",2021-07-22,2021-07-21,1.5,1.5,0
+"28",469,109149,69629,"Azerbaijan","AZE","Overall",2021-07-22,2021-07-21,2.5,2.5,0
+"29",476,109156,69636,"Azerbaijan","AZE","Underlying",2021-07-22,2021-07-21,1,1,0
+"30",490,109170,69650,"Azerbaijan","AZE","Emerging",2021-07-22,2021-07-21,2.5,2.5,0
+"31",521,109201,69681,"Burundi","BDI","Overall",2021-07-22,2021-07-21,4.5,4.5,0
+"32",528,109208,69688,"Burundi","BDI","Underlying",2021-07-22,2021-07-21,4.5,4.5,0
+"33",542,109222,69702,"Burundi","BDI","Emerging",2021-07-22,2021-07-21,2,2,0
+"34",573,109253,69733,"Belgium","BEL","Overall",2021-07-22,2021-07-21,0,0,0
+"35",580,109260,69740,"Belgium","BEL","Underlying",2021-07-22,2021-07-21,0,0,0
+"36",594,109274,69754,"Belgium","BEL","Emerging",2021-07-22,2021-07-21,2,2,0
+"37",625,109305,69785,"Benin","BEN","Overall",2021-07-22,2021-07-21,2,2,0
+"38",632,109312,69792,"Benin","BEN","Underlying",2021-07-22,2021-07-21,1.5,1.5,0
+"39",646,109326,69806,"Benin","BEN","Emerging",2021-07-22,2021-07-21,2,2,0
+"40",677,109357,69837,"Burkina Faso","BFA","Overall",2021-07-22,2021-07-21,4,4,0
+"41",684,109364,69844,"Burkina Faso","BFA","Underlying",2021-07-22,2021-07-21,3,3,0
+"42",698,109378,69858,"Burkina Faso","BFA","Emerging",2021-07-22,2021-07-21,2.5,2.5,0
+"43",729,109409,69889,"Bangladesh","BGD","Overall",2021-07-22,2021-07-21,2.5,2.5,0
+"44",736,109416,69896,"Bangladesh","BGD","Underlying",2021-07-22,2021-07-21,2,2,0
+"45",750,109430,69910,"Bangladesh","BGD","Emerging",2021-07-22,2021-07-21,2.5,2.5,0
+"46",781,109461,69941,"Bulgaria","BGR","Overall",2021-07-22,2021-07-21,0.5,0.5,0
+"47",788,109468,69948,"Bulgaria","BGR","Underlying",2021-07-22,2021-07-21,0,0,0
+"48",802,109482,69962,"Bulgaria","BGR","Emerging",2021-07-22,2021-07-21,0.5,0.5,0
+"49",833,109513,69993,"Bahrain","BHR","Overall",2021-07-22,2021-07-21,2,2,0
+"50",840,109520,70000,"Bahrain","BHR","Underlying",2021-07-22,2021-07-21,0,0,0
+"51",854,109534,70014,"Bahrain","BHR","Emerging",2021-07-22,2021-07-21,1.5,1.5,0
+"52",885,109565,70045,"Bahamas","BHS","Overall",2021-07-22,2021-07-21,1.5,1.5,0
+"53",892,109572,70052,"Bahamas","BHS","Underlying",2021-07-22,2021-07-21,0.5,0.5,0
+"54",906,109586,70066,"Bahamas","BHS","Emerging",2021-07-22,2021-07-21,2,2,0
+"55",937,109617,70097,"Bosnia and Herzegovina","BIH","Overall",2021-07-22,2021-07-21,2,1.5,0.5
+"56",944,109624,70104,"Bosnia and Herzegovina","BIH","Underlying",2021-07-22,2021-07-21,0,0,0
+"57",958,109638,70118,"Bosnia and Herzegovina","BIH","Emerging",2021-07-22,2021-07-21,3,2.5,0.5
+"58",989,109669,70149,"Belarus","BLR","Overall",2021-07-22,2021-07-21,1.5,1.5,0
+"59",996,109676,70156,"Belarus","BLR","Underlying",2021-07-22,2021-07-21,0.5,0.5,0
+"60",1010,109690,70170,"Belarus","BLR","Emerging",2021-07-22,2021-07-21,1.5,1.5,0
+"61",1041,109721,70201,"Belize","BLZ","Overall",2021-07-22,2021-07-21,2,2,0
+"62",1048,109728,70208,"Belize","BLZ","Underlying",2021-07-22,2021-07-21,1,1,0
+"63",1062,109742,70222,"Belize","BLZ","Emerging",2021-07-22,2021-07-21,2,2,0
+"64",1093,109773,70253,"Bolivia","BOL","Overall",2021-07-22,2021-07-21,2.5,2.5,0
+"65",1100,109780,70260,"Bolivia","BOL","Underlying",2021-07-22,2021-07-21,1,1,0
+"66",1114,109794,70274,"Bolivia","BOL","Emerging",2021-07-22,2021-07-21,2,2,0
+"67",1145,109825,70305,"Brazil","BRA","Overall",2021-07-22,2021-07-21,2,2,0
+"68",1152,109832,70312,"Brazil","BRA","Underlying",2021-07-22,2021-07-21,0,0,0
+"69",1166,109846,70326,"Brazil","BRA","Emerging",2021-07-22,2021-07-21,2.5,2.5,0
+"70",1197,109877,70357,"Barbados","BRB","Overall",2021-07-22,2021-07-21,2,2,0
+"71",1204,109884,70364,"Barbados","BRB","Underlying",2021-07-22,2021-07-21,0.5,0.5,0
+"72",1218,109898,70378,"Barbados","BRB","Emerging",2021-07-22,2021-07-21,1.5,1.5,0
+"73",1249,109929,70409,"Brunei Darussalam","BRN","Overall",2021-07-22,2021-07-21,0.5,0.5,0
+"74",1256,109936,70416,"Brunei Darussalam","BRN","Underlying",2021-07-22,2021-07-21,0.5,0.5,0
+"75",1270,109950,70430,"Brunei Darussalam","BRN","Emerging",2021-07-22,2021-07-21,1,1,0
+"76",1301,109981,70461,"Bhutan","BTN","Overall",2021-07-22,2021-07-21,2,2,0
+"77",1308,109988,70468,"Bhutan","BTN","Underlying",2021-07-22,2021-07-21,0.5,0.5,0
+"78",1322,110002,70482,"Bhutan","BTN","Emerging",2021-07-22,2021-07-21,1.5,1.5,0
+"79",1353,110033,70513,"Botswana","BWA","Overall",2021-07-22,2021-07-21,2,2,0
+"80",1360,110040,70520,"Botswana","BWA","Underlying",2021-07-22,2021-07-21,0.5,0.5,0
+"81",1374,110054,70534,"Botswana","BWA","Emerging",2021-07-22,2021-07-21,2,2,0
+"82",1405,110085,70565,"Central African Republic","CAF","Overall",2021-07-22,2021-07-21,5,5,0
+"83",1412,110092,70572,"Central African Republic","CAF","Underlying",2021-07-22,2021-07-21,4,4,0
+"84",1426,110106,70586,"Central African Republic","CAF","Emerging",2021-07-22,2021-07-21,3.5,3.5,0
+"85",1457,110137,70617,"Canada","CAN","Overall",2021-07-22,2021-07-21,0,0,0
+"86",1464,110144,70624,"Canada","CAN","Underlying",2021-07-22,2021-07-21,0,0,0
+"87",1478,110158,70638,"Canada","CAN","Emerging",2021-07-22,2021-07-21,1.5,1.5,0
+"88",1509,110189,70669,"Switzerland","CHE","Overall",2021-07-22,2021-07-21,0,0,0
+"89",1516,110196,70676,"Switzerland","CHE","Underlying",2021-07-22,2021-07-21,0,0,0
+"90",1530,110210,70690,"Switzerland","CHE","Emerging",2021-07-22,2021-07-21,1.5,1.5,0
+"91",1561,110241,70721,"Chile","CHL","Overall",2021-07-22,2021-07-21,1,1,0
+"92",1568,110248,70728,"Chile","CHL","Underlying",2021-07-22,2021-07-21,0.5,0.5,0
+"93",1582,110262,70742,"Chile","CHL","Emerging",2021-07-22,2021-07-21,2,2,0
+"94",1613,110293,70773,"China","CHN","Overall",2021-07-22,2021-07-21,1,1,0
+"95",1620,110300,70780,"China","CHN","Underlying",2021-07-22,2021-07-21,1,1,0
+"96",1634,110314,70794,"China","CHN","Emerging",2021-07-22,2021-07-21,1.5,1.5,0
+"97",1665,110345,70825,"Côte d'Ivoire","CIV","Overall",2021-07-22,2021-07-21,3,3,0
+"98",1672,110352,70832,"Côte d'Ivoire","CIV","Underlying",2021-07-22,2021-07-21,1.5,1.5,0
+"99",1686,110366,70846,"Côte d'Ivoire","CIV","Emerging",2021-07-22,2021-07-21,1.5,1.5,0
+"100",1717,110397,70877,"Cameroon","CMR","Overall",2021-07-22,2021-07-21,4.5,4.5,0
+"101",1724,110404,70884,"Cameroon","CMR","Underlying",2021-07-22,2021-07-21,2.5,2.5,0
+"102",1738,110418,70898,"Cameroon","CMR","Emerging",2021-07-22,2021-07-21,3,3,0
+"103",1769,110449,70929,"Congo DR","COD","Overall",2021-07-22,2021-07-21,5,5,0
+"104",1776,110456,70936,"Congo DR","COD","Underlying",2021-07-22,2021-07-21,4.5,4.5,0
+"105",1790,110470,70950,"Congo DR","COD","Emerging",2021-07-22,2021-07-21,4.5,4.5,0
+"106",1821,110501,70981,"Congo","COG","Overall",2021-07-22,2021-07-21,4,4,0
+"107",1828,110508,70988,"Congo","COG","Underlying",2021-07-22,2021-07-21,3.5,3.5,0
+"108",1842,110522,71002,"Congo","COG","Emerging",2021-07-22,2021-07-21,3.5,3.5,0
+"109",1873,110553,71033,"Colombia","COL","Overall",2021-07-22,2021-07-21,3.5,3.5,0
+"110",1880,110560,71040,"Colombia","COL","Underlying",2021-07-22,2021-07-21,0.5,0.5,0
+"111",1894,110574,71054,"Colombia","COL","Emerging",2021-07-22,2021-07-21,3.5,3.5,0
+"112",1925,110605,71085,"Comoros","COM","Overall",2021-07-22,2021-07-21,0.5,0.5,0
+"113",1932,110612,71092,"Comoros","COM","Underlying",2021-07-22,2021-07-21,3,3,0
+"114",1946,110626,71106,"Comoros","COM","Emerging",2021-07-22,2021-07-21,0,0,0
+"115",1977,110657,71137,"Cabo Verde","CPV","Overall",2021-07-22,2021-07-21,2,1.5,0.5
+"116",1984,110664,71144,"Cabo Verde","CPV","Underlying",2021-07-22,2021-07-21,0.5,0.5,0
+"117",1998,110678,71158,"Cabo Verde","CPV","Emerging",2021-07-22,2021-07-21,1,0.5,0.5
+"118",2029,110709,71189,"Costa Rica","CRI","Overall",2021-07-22,2021-07-21,2.5,2.5,0
+"119",2036,110716,71196,"Costa Rica","CRI","Underlying",2021-07-22,2021-07-21,0.5,0.5,0
+"120",2050,110730,71210,"Costa Rica","CRI","Emerging",2021-07-22,2021-07-21,2.5,2.5,0
+"121",2081,110761,71241,"Cuba","CUB","Overall",2021-07-22,2021-07-21,2,2,0
+"122",2088,110768,71248,"Cuba","CUB","Underlying",2021-07-22,2021-07-21,1.5,1.5,0
+"123",2102,110782,71262,"Cuba","CUB","Emerging",2021-07-22,2021-07-21,2,2,0
+"124",2133,110813,71293,"Cyprus","CYP","Overall",2021-07-22,2021-07-21,1,1,0
+"125",2140,110820,71300,"Cyprus","CYP","Underlying",2021-07-22,2021-07-21,0,0,0
+"126",2154,110834,71314,"Cyprus","CYP","Emerging",2021-07-22,2021-07-21,1,1,0
+"127",2185,110865,71345,"Czech Republic","CZE","Overall",2021-07-22,2021-07-21,0.5,0.5,0
+"128",2192,110872,71352,"Czech Republic","CZE","Underlying",2021-07-22,2021-07-21,0,0,0
+"129",2206,110886,71366,"Czech Republic","CZE","Emerging",2021-07-22,2021-07-21,1.5,1.5,0
+"130",2237,110917,71397,"Germany","DEU","Overall",2021-07-22,2021-07-21,0,0,0
+"131",2244,110924,71404,"Germany","DEU","Underlying",2021-07-22,2021-07-21,0,0,0
+"132",2258,110938,71418,"Germany","DEU","Emerging",2021-07-22,2021-07-21,0,0,0
+"133",2289,110969,71449,"Djibouti","DJI","Overall",2021-07-22,2021-07-21,2,2,0
+"134",2296,110976,71456,"Djibouti","DJI","Underlying",2021-07-22,2021-07-21,2,2,0
+"135",2310,110990,71470,"Djibouti","DJI","Emerging",2021-07-22,2021-07-21,0,0,0
+"136",2341,111021,71501,"Dominica","DMA","Overall",2021-07-22,2021-07-21,1,1,0
+"137",2348,111028,71508,"Dominica","DMA","Underlying",2021-07-22,2021-07-21,0.5,0.5,0
+"138",2362,111042,71522,"Dominica","DMA","Emerging",2021-07-22,2021-07-21,0,0,0
+"139",2393,111073,71553,"Denmark","DNK","Overall",2021-07-22,2021-07-21,0,0,0
+"140",2400,111080,71560,"Denmark","DNK","Underlying",2021-07-22,2021-07-21,0,0,0
+"141",2414,111094,71574,"Denmark","DNK","Emerging",2021-07-22,2021-07-21,1.5,1.5,0
+"142",2445,111125,71605,"Dominican Republic","DOM","Overall",2021-07-22,2021-07-21,1.5,1.5,0
+"143",2452,111132,71612,"Dominican Republic","DOM","Underlying",2021-07-22,2021-07-21,0.5,0.5,0
+"144",2466,111146,71626,"Dominican Republic","DOM","Emerging",2021-07-22,2021-07-21,1,1,0
+"145",2497,111177,71657,"Algeria","DZA","Overall",2021-07-22,2021-07-21,2.5,2.5,0
+"146",2504,111184,71664,"Algeria","DZA","Underlying",2021-07-22,2021-07-21,1,1,0
+"147",2518,111198,71678,"Algeria","DZA","Emerging",2021-07-22,2021-07-21,1.5,1.5,0
+"148",2549,111229,71709,"Ecuador","ECU","Overall",2021-07-22,2021-07-21,3,3,0
+"149",2556,111236,71716,"Ecuador","ECU","Underlying",2021-07-22,2021-07-21,0.5,0.5,0
+"150",2570,111250,71730,"Ecuador","ECU","Emerging",2021-07-22,2021-07-21,3.5,3.5,0
+"151",2601,111281,71761,"Egypt","EGY","Overall",2021-07-22,2021-07-21,2,2,0
+"152",2608,111288,71768,"Egypt","EGY","Underlying",2021-07-22,2021-07-21,0,0,0
+"153",2622,111302,71782,"Egypt","EGY","Emerging",2021-07-22,2021-07-21,1.5,1.5,0
+"154",2653,111333,71813,"Eritrea","ERI","Overall",2021-07-22,2021-07-21,2,2,0
+"155",2660,111340,71820,"Eritrea","ERI","Underlying",2021-07-22,2021-07-21,3.5,3.5,0
+"156",2674,111354,71834,"Eritrea","ERI","Emerging",2021-07-22,2021-07-21,0.5,0.5,0
+"157",2705,111385,71865,"Spain","ESP","Overall",2021-07-22,2021-07-21,0,0,0
+"158",2712,111392,71872,"Spain","ESP","Underlying",2021-07-22,2021-07-21,0,0,0
+"159",2726,111406,71886,"Spain","ESP","Emerging",2021-07-22,2021-07-21,2,2,0
+"160",2757,111437,71917,"Estonia","EST","Overall",2021-07-22,2021-07-21,0.5,0.5,0
+"161",2764,111444,71924,"Estonia","EST","Underlying",2021-07-22,2021-07-21,0,0,0
+"162",2778,111458,71938,"Estonia","EST","Emerging",2021-07-22,2021-07-21,2,2,0
+"163",2809,111489,71969,"Ethiopia","ETH","Overall",2021-07-22,2021-07-21,5,5,0
+"164",2816,111496,71976,"Ethiopia","ETH","Underlying",2021-07-22,2021-07-21,3.5,3.5,0
+"165",2830,111510,71990,"Ethiopia","ETH","Emerging",2021-07-22,2021-07-21,2.5,2.5,0
+"166",2861,111541,72021,"Finland","FIN","Overall",2021-07-22,2021-07-21,0,0,0
+"167",2868,111548,72028,"Finland","FIN","Underlying",2021-07-22,2021-07-21,0,0,0
+"168",2882,111562,72042,"Finland","FIN","Emerging",2021-07-22,2021-07-21,1.5,1.5,0
+"169",2913,111593,72073,"Fiji","FJI","Overall",2021-07-22,2021-07-21,1.5,1.5,0
+"170",2920,111600,72080,"Fiji","FJI","Underlying",2021-07-22,2021-07-21,0.5,0.5,0
+"171",2934,111614,72094,"Fiji","FJI","Emerging",2021-07-22,2021-07-21,2,2,0
+"172",2965,111645,72125,"France","FRA","Overall",2021-07-22,2021-07-21,0.5,0.5,0
+"173",2972,111652,72132,"France","FRA","Underlying",2021-07-22,2021-07-21,0,0,0
+"174",2986,111666,72146,"France","FRA","Emerging",2021-07-22,2021-07-21,1.5,1.5,0
+"175",3017,111697,72177,"Micronesia","FSM","Overall",2021-07-22,2021-07-21,0.5,0.5,0
+"176",3024,111704,72184,"Micronesia","FSM","Underlying",2021-07-22,2021-07-21,1.5,1.5,0
+"177",3038,111718,72198,"Micronesia","FSM","Emerging",2021-07-22,2021-07-21,0.5,0.5,0
+"178",3069,111749,72229,"Gabon","GAB","Overall",2021-07-22,2021-07-21,2,2,0
+"179",3076,111756,72236,"Gabon","GAB","Underlying",2021-07-22,2021-07-21,1,1,0
+"180",3090,111770,72250,"Gabon","GAB","Emerging",2021-07-22,2021-07-21,1,1,0
+"181",3121,111801,72281,"United Kingdom","GBR","Overall",2021-07-22,2021-07-21,0,0,0
+"182",3128,111808,72288,"United Kingdom","GBR","Underlying",2021-07-22,2021-07-21,0,0,0
+"183",3142,111822,72302,"United Kingdom","GBR","Emerging",2021-07-22,2021-07-21,2,2,0
+"184",3173,111853,72333,"Georgia","GEO","Overall",2021-07-22,2021-07-21,1.5,1.5,0
+"185",3180,111860,72340,"Georgia","GEO","Underlying",2021-07-22,2021-07-21,0,0,0
+"186",3194,111874,72354,"Georgia","GEO","Emerging",2021-07-22,2021-07-21,3,3,0
+"187",3225,111905,72385,"Ghana","GHA","Overall",2021-07-22,2021-07-21,3,3,0
+"188",3232,111912,72392,"Ghana","GHA","Underlying",2021-07-22,2021-07-21,1,1,0
+"189",3246,111926,72406,"Ghana","GHA","Emerging",2021-07-22,2021-07-21,3.5,3.5,0
+"190",3277,111957,72437,"Guinea","GIN","Overall",2021-07-22,2021-07-21,3.5,3.5,0
+"191",3284,111964,72444,"Guinea","GIN","Underlying",2021-07-22,2021-07-21,2.5,2.5,0
+"192",3298,111978,72458,"Guinea","GIN","Emerging",2021-07-22,2021-07-21,1.5,1.5,0
+"193",3329,112009,72489,"Gambia","GMB","Overall",2021-07-22,2021-07-21,3.5,3.5,0
+"194",3336,112016,72496,"Gambia","GMB","Underlying",2021-07-22,2021-07-21,2,2,0
+"195",3350,112030,72510,"Gambia","GMB","Emerging",2021-07-22,2021-07-21,2.5,2.5,0
+"196",3381,112061,72541,"Guinea-Bissau","GNB","Overall",2021-07-22,2021-07-21,2,2,0
+"197",3388,112068,72548,"Guinea-Bissau","GNB","Underlying",2021-07-22,2021-07-21,3,3,0
+"198",3402,112082,72562,"Guinea-Bissau","GNB","Emerging",2021-07-22,2021-07-21,1.5,1.5,0
+"199",3433,112113,72593,"Equatorial Guinea","GNQ","Overall",2021-07-22,2021-07-21,1.5,1.5,0
+"200",3440,112120,72600,"Equatorial Guinea","GNQ","Underlying",2021-07-22,2021-07-21,1.5,1.5,0
+"201",3454,112134,72614,"Equatorial Guinea","GNQ","Emerging",2021-07-22,2021-07-21,0,0,0
+"202",3485,112165,72645,"Greece","GRC","Overall",2021-07-22,2021-07-21,1,1,0
+"203",3492,112172,72652,"Greece","GRC","Underlying",2021-07-22,2021-07-21,0.5,0.5,0
+"204",3506,112186,72666,"Greece","GRC","Emerging",2021-07-22,2021-07-21,1.5,1.5,0
+"205",3537,112217,72697,"Grenada","GRD","Overall",2021-07-22,2021-07-21,0,0,0
+"206",3544,112224,72704,"Grenada","GRD","Underlying",2021-07-22,2021-07-21,0.5,0.5,0
+"207",3558,112238,72718,"Grenada","GRD","Emerging",2021-07-22,2021-07-21,0,0,0
+"208",3589,112269,72749,"Guatemala","GTM","Overall",2021-07-22,2021-07-21,3,3,0
+"209",3596,112276,72756,"Guatemala","GTM","Underlying",2021-07-22,2021-07-21,1.5,1.5,0
+"210",3610,112290,72770,"Guatemala","GTM","Emerging",2021-07-22,2021-07-21,1.5,1.5,0
+"211",3641,112321,72801,"Guyana","GUY","Overall",2021-07-22,2021-07-21,1,1,0
+"212",3648,112328,72808,"Guyana","GUY","Underlying",2021-07-22,2021-07-21,0.5,0.5,0
+"213",3662,112342,72822,"Guyana","GUY","Emerging",2021-07-22,2021-07-21,0.5,0.5,0
+"214",3693,112373,72853,"Honduras","HND","Overall",2021-07-22,2021-07-21,2.5,2.5,0
+"215",3700,112380,72860,"Honduras","HND","Underlying",2021-07-22,2021-07-21,1.5,1.5,0
+"216",3714,112394,72874,"Honduras","HND","Emerging",2021-07-22,2021-07-21,2,2,0
+"217",3745,112425,72905,"Croatia","HRV","Overall",2021-07-22,2021-07-21,0.5,0.5,0
+"218",3752,112432,72912,"Croatia","HRV","Underlying",2021-07-22,2021-07-21,0,0,0
+"219",3766,112446,72926,"Croatia","HRV","Emerging",2021-07-22,2021-07-21,2,2,0
+"220",3797,112477,72957,"Haiti","HTI","Overall",2021-07-22,2021-07-21,4,4,0
+"221",3804,112484,72964,"Haiti","HTI","Underlying",2021-07-22,2021-07-21,5,5,0
+"222",3818,112498,72978,"Haiti","HTI","Emerging",2021-07-22,2021-07-21,3,3,0
+"223",3849,112529,73009,"Hungary","HUN","Overall",2021-07-22,2021-07-21,0.5,0.5,0
+"224",3856,112536,73016,"Hungary","HUN","Underlying",2021-07-22,2021-07-21,0,0,0
+"225",3870,112550,73030,"Hungary","HUN","Emerging",2021-07-22,2021-07-21,1,1,0
+"226",3901,112581,73061,"Indonesia","IDN","Overall",2021-07-22,2021-07-21,2.5,2.5,0
+"227",3908,112588,73068,"Indonesia","IDN","Underlying",2021-07-22,2021-07-21,1,1,0
+"228",3922,112602,73082,"Indonesia","IDN","Emerging",2021-07-22,2021-07-21,1,2,-1
+"229",3953,112633,73113,"India","IND","Overall",2021-07-22,2021-07-21,1.5,1.5,0
+"230",3960,112640,73120,"India","IND","Underlying",2021-07-22,2021-07-21,1.5,1.5,0
+"231",3974,112654,73134,"India","IND","Emerging",2021-07-22,2021-07-21,0.5,0.5,0
+"232",4005,112685,73165,"Ireland","IRL","Overall",2021-07-22,2021-07-21,0,0,0
+"233",4012,112692,73172,"Ireland","IRL","Underlying",2021-07-22,2021-07-21,0,0,0
+"234",4026,112706,73186,"Ireland","IRL","Emerging",2021-07-22,2021-07-21,2,2,0
+"235",4057,112737,73217,"Iran","IRN","Overall",2021-07-22,2021-07-21,3,3,0
+"236",4064,112744,73224,"Iran","IRN","Underlying",2021-07-22,2021-07-21,1.5,1.5,0
+"237",4078,112758,73238,"Iran","IRN","Emerging",2021-07-22,2021-07-21,3,3,0
+"238",4109,112789,73269,"Iraq","IRQ","Overall",2021-07-22,2021-07-21,3,3,0
+"239",4116,112796,73276,"Iraq","IRQ","Underlying",2021-07-22,2021-07-21,2.5,2.5,0
+"240",4130,112810,73290,"Iraq","IRQ","Emerging",2021-07-22,2021-07-21,2,2,0
+"241",4161,112841,73321,"Iceland","ISL","Overall",2021-07-22,2021-07-21,0,0,0
+"242",4168,112848,73328,"Iceland","ISL","Underlying",2021-07-22,2021-07-21,0,0,0
+"243",4182,112862,73342,"Iceland","ISL","Emerging",2021-07-22,2021-07-21,0.5,0.5,0
+"244",4213,112893,73373,"Israel","ISR","Overall",2021-07-22,2021-07-21,0.5,0.5,0
+"245",4220,112900,73380,"Israel","ISR","Underlying",2021-07-22,2021-07-21,0,0,0
+"246",4234,112914,73394,"Israel","ISR","Emerging",2021-07-22,2021-07-21,2.5,2.5,0
+"247",4265,112945,73425,"Italy","ITA","Overall",2021-07-22,2021-07-21,1,1,0
+"248",4272,112952,73432,"Italy","ITA","Underlying",2021-07-22,2021-07-21,0,0,0
+"249",4286,112966,73446,"Italy","ITA","Emerging",2021-07-22,2021-07-21,2.5,2.5,0
+"250",4317,112997,73477,"Jamaica","JAM","Overall",2021-07-22,2021-07-21,0.5,0.5,0
+"251",4324,113004,73484,"Jamaica","JAM","Underlying",2021-07-22,2021-07-21,1,1,0
+"252",4338,113018,73498,"Jamaica","JAM","Emerging",2021-07-22,2021-07-21,0,0,0
+"253",4369,113049,73529,"Jordan","JOR","Overall",2021-07-22,2021-07-21,2,2,0
+"254",4376,113056,73536,"Jordan","JOR","Underlying",2021-07-22,2021-07-21,0,0,0
+"255",4390,113070,73550,"Jordan","JOR","Emerging",2021-07-22,2021-07-21,2,2,0
+"256",4421,113101,73581,"Japan","JPN","Overall",2021-07-22,2021-07-21,0,0,0
+"257",4428,113108,73588,"Japan","JPN","Underlying",2021-07-22,2021-07-21,1,1,0
+"258",4442,113122,73602,"Japan","JPN","Emerging",2021-07-22,2021-07-21,0,0,0
+"259",4473,113153,73633,"Kazakhstan","KAZ","Overall",2021-07-22,2021-07-21,2,2,0
+"260",4480,113160,73640,"Kazakhstan","KAZ","Underlying",2021-07-22,2021-07-21,0,0,0
+"261",4494,113174,73654,"Kazakhstan","KAZ","Emerging",2021-07-22,2021-07-21,2,2,0
+"262",4525,113205,73685,"Kenya","KEN","Overall",2021-07-22,2021-07-21,5,5,0
+"263",4532,113212,73692,"Kenya","KEN","Underlying",2021-07-22,2021-07-21,2.5,2.5,0
+"264",4546,113226,73706,"Kenya","KEN","Emerging",2021-07-22,2021-07-21,5,5,0
+"265",4577,113257,73737,"Kyrgyzstan","KGZ","Overall",2021-07-22,2021-07-21,0.5,0.5,0
+"266",4584,113264,73744,"Kyrgyzstan","KGZ","Underlying",2021-07-22,2021-07-21,0,0,0
+"267",4598,113278,73758,"Kyrgyzstan","KGZ","Emerging",2021-07-22,2021-07-21,1.5,1.5,0
+"268",4629,113309,73789,"Cambodia","KHM","Overall",2021-07-22,2021-07-21,0.5,0.5,0
+"269",4636,113316,73796,"Cambodia","KHM","Underlying",2021-07-22,2021-07-21,2,2,0
+"270",4650,113330,73810,"Cambodia","KHM","Emerging",2021-07-22,2021-07-21,1,1,0
+"271",4681,113361,73841,"Kiribati","KIR","Overall",2021-07-22,2021-07-21,1.5,1.5,0
+"272",4688,113368,73848,"Kiribati","KIR","Underlying",2021-07-22,2021-07-21,2.5,2.5,0
+"273",4702,113382,73862,"Kiribati","KIR","Emerging",2021-07-22,2021-07-21,1,1,0
+"274",4733,113413,73893,"Saint Kitts and Nevis","KNA","Overall",2021-07-22,2021-07-21,0,0,0
+"275",4740,113420,73900,"Saint Kitts and Nevis","KNA","Underlying",2021-07-22,2021-07-21,0.5,0.5,0
+"276",4754,113434,73914,"Saint Kitts and Nevis","KNA","Emerging",2021-07-22,2021-07-21,0,0,0
+"277",4785,113465,73945,"Korea Republic of","KOR","Overall",2021-07-22,2021-07-21,1,1,0
+"278",4792,113472,73952,"Korea Republic of","KOR","Underlying",2021-07-22,2021-07-21,1.5,1.5,0
+"279",4806,113486,73966,"Korea Republic of","KOR","Emerging",2021-07-22,2021-07-21,0,0,0
+"280",4837,113517,73997,"Kuwait","KWT","Overall",2021-07-22,2021-07-21,0.5,0.5,0
+"281",4844,113524,74004,"Kuwait","KWT","Underlying",2021-07-22,2021-07-21,0,0,0
+"282",4858,113538,74018,"Kuwait","KWT","Emerging",2021-07-22,2021-07-21,1,1,0
+"283",4889,113569,74049,"Lao PDR","LAO","Overall",2021-07-22,2021-07-21,1.5,2,-0.5
+"284",4896,113576,74056,"Lao PDR","LAO","Underlying",2021-07-22,2021-07-21,1,1,0
+"285",4910,113590,74070,"Lao PDR","LAO","Emerging",2021-07-22,2021-07-21,0.5,1,-0.5
+"286",4941,113621,74101,"Lebanon","LBN","Overall",2021-07-22,2021-07-21,5,4.5,0.5
+"287",4948,113628,74108,"Lebanon","LBN","Underlying",2021-07-22,2021-07-21,3,3,0
+"288",4962,113642,74122,"Lebanon","LBN","Emerging",2021-07-22,2021-07-21,3.5,3.5,0
+"289",4993,113673,74153,"Liberia","LBR","Overall",2021-07-22,2021-07-21,3.5,3.5,0
+"290",5000,113680,74160,"Liberia","LBR","Underlying",2021-07-22,2021-07-21,3,3,0
+"291",5014,113694,74174,"Liberia","LBR","Emerging",2021-07-22,2021-07-21,2,2,0
+"292",5045,113725,74205,"Libya","LBY","Overall",2021-07-22,2021-07-21,3,3,0
+"293",5052,113732,74212,"Libya","LBY","Underlying",2021-07-22,2021-07-21,2,2,0
+"294",5066,113746,74226,"Libya","LBY","Emerging",2021-07-22,2021-07-21,2.5,2.5,0
+"295",5097,113777,74257,"Saint Lucia","LCA","Overall",2021-07-22,2021-07-21,1.5,1.5,0
+"296",5104,113784,74264,"Saint Lucia","LCA","Underlying",2021-07-22,2021-07-21,0,0,0
+"297",5118,113798,74278,"Saint Lucia","LCA","Emerging",2021-07-22,2021-07-21,0.5,0.5,0
+"298",5149,113829,74309,"Liechtenstein","LIE","Overall",2021-07-22,2021-07-21,0,0,0
+"299",5156,113836,74316,"Liechtenstein","LIE","Underlying",2021-07-22,2021-07-21,0,0,0
+"300",5170,113850,74330,"Liechtenstein","LIE","Emerging",2021-07-22,2021-07-21,0,0,0
+"301",5201,113881,74361,"Sri Lanka","LKA","Overall",2021-07-22,2021-07-21,1.5,1.5,0
+"302",5208,113888,74368,"Sri Lanka","LKA","Underlying",2021-07-22,2021-07-21,1,1,0
+"303",5222,113902,74382,"Sri Lanka","LKA","Emerging",2021-07-22,2021-07-21,0.5,0.5,0
+"304",5253,113933,74413,"Lesotho","LSO","Overall",2021-07-22,2021-07-21,3,3,0
+"305",5260,113940,74420,"Lesotho","LSO","Underlying",2021-07-22,2021-07-21,2,2,0
+"306",5274,113954,74434,"Lesotho","LSO","Emerging",2021-07-22,2021-07-21,1.5,0.5,1
+"307",5305,113985,74465,"Lithuania","LTU","Overall",2021-07-22,2021-07-21,0.5,0.5,0
+"308",5312,113992,74472,"Lithuania","LTU","Underlying",2021-07-22,2021-07-21,0,0,0
+"309",5326,114006,74486,"Lithuania","LTU","Emerging",2021-07-22,2021-07-21,1.5,1.5,0
+"310",5357,114037,74517,"Luxembourg","LUX","Overall",2021-07-22,2021-07-21,0.5,0.5,0
+"311",5364,114044,74524,"Luxembourg","LUX","Underlying",2021-07-22,2021-07-21,0,0,0
+"312",5378,114058,74538,"Luxembourg","LUX","Emerging",2021-07-22,2021-07-21,1.5,1.5,0
+"313",5409,114089,74569,"Latvia","LVA","Overall",2021-07-22,2021-07-21,0.5,0.5,0
+"314",5416,114096,74576,"Latvia","LVA","Underlying",2021-07-22,2021-07-21,0,0,0
+"315",5430,114110,74590,"Latvia","LVA","Emerging",2021-07-22,2021-07-21,1,1,0
+"316",5461,114141,74621,"Morocco","MAR","Overall",2021-07-22,2021-07-21,2,2,0
+"317",5468,114148,74628,"Morocco","MAR","Underlying",2021-07-22,2021-07-21,0,0,0
+"318",5482,114162,74642,"Morocco","MAR","Emerging",2021-07-22,2021-07-21,3,3,0
+"319",5513,114193,74673,"Moldova Republic of","MDA","Overall",2021-07-22,2021-07-21,2,2,0
+"320",5520,114200,74680,"Moldova Republic of","MDA","Underlying",2021-07-22,2021-07-21,0,0,0
+"321",5534,114214,74694,"Moldova Republic of","MDA","Emerging",2021-07-22,2021-07-21,1.5,1.5,0
+"322",5565,114245,74725,"Madagascar","MDG","Overall",2021-07-22,2021-07-21,4.5,4.5,0
+"323",5572,114252,74732,"Madagascar","MDG","Underlying",2021-07-22,2021-07-21,3.5,3.5,0
+"324",5586,114266,74746,"Madagascar","MDG","Emerging",2021-07-22,2021-07-21,3,3,0
+"325",5617,114297,74777,"Maldives","MDV","Overall",2021-07-22,2021-07-21,1,1,0
+"326",5624,114304,74784,"Maldives","MDV","Underlying",2021-07-22,2021-07-21,0.5,0.5,0
+"327",5638,114318,74798,"Maldives","MDV","Emerging",2021-07-22,2021-07-21,1,0.5,0.5
+"328",5669,114349,74829,"Mexico","MEX","Overall",2021-07-22,2021-07-21,1,1,0
+"329",5676,114356,74836,"Mexico","MEX","Underlying",2021-07-22,2021-07-21,0.5,0.5,0
+"330",5690,114370,74850,"Mexico","MEX","Emerging",2021-07-22,2021-07-21,0.5,0.5,0
+"331",5721,114401,74881,"Marshall Islands","MHL","Overall",2021-07-22,2021-07-21,0,0,0
+"332",5728,114408,74888,"Marshall Islands","MHL","Underlying",2021-07-22,2021-07-21,2.5,2.5,0
+"333",5742,114422,74902,"Marshall Islands","MHL","Emerging",2021-07-22,2021-07-21,0,0,0
+"334",5773,114453,74933,"North Macedonia","MKD","Overall",2021-07-22,2021-07-21,0.5,0.5,0
+"335",5780,114460,74940,"North Macedonia","MKD","Underlying",2021-07-22,2021-07-21,0,0,0
+"336",5794,114474,74954,"North Macedonia","MKD","Emerging",2021-07-22,2021-07-21,0.5,0.5,0
+"337",5825,114505,74985,"Mali","MLI","Overall",2021-07-22,2021-07-21,4,4,0
+"338",5832,114512,74992,"Mali","MLI","Underlying",2021-07-22,2021-07-21,3,3,0
+"339",5846,114526,75006,"Mali","MLI","Emerging",2021-07-22,2021-07-21,3,3,0
+"340",5877,114557,75037,"Malta","MLT","Overall",2021-07-22,2021-07-21,1,1,0
+"341",5884,114564,75044,"Malta","MLT","Underlying",2021-07-22,2021-07-21,0,0,0
+"342",5898,114578,75058,"Malta","MLT","Emerging",2021-07-22,2021-07-21,1,1,0
+"343",5929,114609,75089,"Myanmar","MMR","Overall",2021-07-22,2021-07-21,3.5,3.5,0
+"344",5936,114616,75096,"Myanmar","MMR","Underlying",2021-07-22,2021-07-21,4,4,0
+"345",5950,114630,75110,"Myanmar","MMR","Emerging",2021-07-22,2021-07-21,3,3,0
+"346",5981,114661,75141,"Montenegro","MNE","Overall",2021-07-22,2021-07-21,0,0,0
+"347",5988,114668,75148,"Montenegro","MNE","Underlying",2021-07-22,2021-07-21,0,0,0
+"348",6002,114682,75162,"Montenegro","MNE","Emerging",2021-07-22,2021-07-21,0,0,0
+"349",6033,114713,75193,"Mongolia","MNG","Overall",2021-07-22,2021-07-21,1,1,0
+"350",6040,114720,75200,"Mongolia","MNG","Underlying",2021-07-22,2021-07-21,0.5,0.5,0
+"351",6054,114734,75214,"Mongolia","MNG","Emerging",2021-07-22,2021-07-21,1.5,1.5,0
+"352",6085,114765,75245,"Mozambique","MOZ","Overall",2021-07-22,2021-07-21,4.5,4.5,0
+"353",6092,114772,75252,"Mozambique","MOZ","Underlying",2021-07-22,2021-07-21,4.5,4.5,0
+"354",6106,114786,75266,"Mozambique","MOZ","Emerging",2021-07-22,2021-07-21,3.5,3.5,0
+"355",6137,114817,75297,"Mauritania","MRT","Overall",2021-07-22,2021-07-21,3,3,0
+"356",6144,114824,75304,"Mauritania","MRT","Underlying",2021-07-22,2021-07-21,2.5,2.5,0
+"357",6158,114838,75318,"Mauritania","MRT","Emerging",2021-07-22,2021-07-21,2,2,0
+"358",6189,114869,75349,"Mauritius","MUS","Overall",2021-07-22,2021-07-21,1.5,1,0.5
+"359",6196,114876,75356,"Mauritius","MUS","Underlying",2021-07-22,2021-07-21,0.5,0.5,0
+"360",6210,114890,75370,"Mauritius","MUS","Emerging",2021-07-22,2021-07-21,2,2,0
+"361",6241,114921,75401,"Malawi","MWI","Overall",2021-07-22,2021-07-21,3,3,0
+"362",6248,114928,75408,"Malawi","MWI","Underlying",2021-07-22,2021-07-21,2.5,2.5,0
+"363",6262,114942,75422,"Malawi","MWI","Emerging",2021-07-22,2021-07-21,2,2,0
+"364",6293,114973,75453,"Malaysia","MYS","Overall",2021-07-22,2021-07-21,1,1,0
+"365",6300,114980,75460,"Malaysia","MYS","Underlying",2021-07-22,2021-07-21,0,0,0
+"366",6314,114994,75474,"Malaysia","MYS","Emerging",2021-07-22,2021-07-21,3,3,0
+"367",6345,115025,75505,"Namibia","NAM","Overall",2021-07-22,2021-07-21,2.5,2.5,0
+"368",6352,115032,75512,"Namibia","NAM","Underlying",2021-07-22,2021-07-21,1.5,1.5,0
+"369",6366,115046,75526,"Namibia","NAM","Emerging",2021-07-22,2021-07-21,2,2,0
+"370",6397,115077,75557,"Niger","NER","Overall",2021-07-22,2021-07-21,4,4,0
+"371",6404,115084,75564,"Niger","NER","Underlying",2021-07-22,2021-07-21,4,4,0
+"372",6418,115098,75578,"Niger","NER","Emerging",2021-07-22,2021-07-21,3,3,0
+"373",6449,115129,75609,"Nigeria","NGA","Overall",2021-07-22,2021-07-21,5,5,0
+"374",6456,115136,75616,"Nigeria","NGA","Underlying",2021-07-22,2021-07-21,3.5,3.5,0
+"375",6470,115150,75630,"Nigeria","NGA","Emerging",2021-07-22,2021-07-21,3.5,4.5,-1
+"376",6501,115181,75661,"Nicaragua","NIC","Overall",2021-07-22,2021-07-21,2,2,0
+"377",6508,115188,75668,"Nicaragua","NIC","Underlying",2021-07-22,2021-07-21,1,1,0
+"378",6522,115202,75682,"Nicaragua","NIC","Emerging",2021-07-22,2021-07-21,2,2,0
+"379",6553,115233,75713,"Netherlands","NLD","Overall",2021-07-22,2021-07-21,0,0,0
+"380",6560,115240,75720,"Netherlands","NLD","Underlying",2021-07-22,2021-07-21,0,0,0
+"381",6574,115254,75734,"Netherlands","NLD","Emerging",2021-07-22,2021-07-21,2,2,0
+"382",6605,115285,75765,"Norway","NOR","Overall",2021-07-22,2021-07-21,0,0,0
+"383",6612,115292,75772,"Norway","NOR","Underlying",2021-07-22,2021-07-21,0,0,0
+"384",6626,115306,75786,"Norway","NOR","Emerging",2021-07-22,2021-07-21,0,0,0
+"385",6657,115337,75817,"Nepal","NPL","Overall",2021-07-22,2021-07-21,1.5,1.5,0
+"386",6664,115344,75824,"Nepal","NPL","Underlying",2021-07-22,2021-07-21,2,2,0
+"387",6678,115358,75838,"Nepal","NPL","Emerging",2021-07-22,2021-07-21,0.5,0.5,0
+"388",6709,115389,75869,"Nauru","NRU","Overall",2021-07-22,2021-07-21,0,0,0
+"389",6716,115396,75876,"Nauru","NRU","Underlying",2021-07-22,2021-07-21,0.5,0.5,0
+"390",6730,115410,75890,"Nauru","NRU","Emerging",2021-07-22,2021-07-21,0,0,0
+"391",6761,115441,75921,"New Zealand","NZL","Overall",2021-07-22,2021-07-21,0,0,0
+"392",6768,115448,75928,"New Zealand","NZL","Underlying",2021-07-22,2021-07-21,0,0,0
+"393",6782,115462,75942,"New Zealand","NZL","Emerging",2021-07-22,2021-07-21,0,0,0
+"394",6813,115493,75973,"Oman","OMN","Overall",2021-07-22,2021-07-21,0.5,0.5,0
+"395",6820,115500,75980,"Oman","OMN","Underlying",2021-07-22,2021-07-21,0,0,0
+"396",6834,115514,75994,"Oman","OMN","Emerging",2021-07-22,2021-07-21,1,1,0
+"397",6865,115545,76025,"Pakistan","PAK","Overall",2021-07-22,2021-07-21,4,4,0
+"398",6872,115552,76032,"Pakistan","PAK","Underlying",2021-07-22,2021-07-21,2.5,2.5,0
+"399",6886,115566,76046,"Pakistan","PAK","Emerging",2021-07-22,2021-07-21,2,2,0
+"400",6917,115597,76077,"Panama","PAN","Overall",2021-07-22,2021-07-21,1,1.5,-0.5
+"401",6924,115604,76084,"Panama","PAN","Underlying",2021-07-22,2021-07-21,0.5,0.5,0
+"402",6938,115618,76098,"Panama","PAN","Emerging",2021-07-22,2021-07-21,1.5,1.5,0
+"403",6969,115649,76129,"Peru","PER","Overall",2021-07-22,2021-07-21,1,1,0
+"404",6976,115656,76136,"Peru","PER","Underlying",2021-07-22,2021-07-21,1,1,0
+"405",6990,115670,76150,"Peru","PER","Emerging",2021-07-22,2021-07-21,3.5,3.5,0
+"406",7021,115701,76181,"Philippines","PHL","Overall",2021-07-22,2021-07-21,1.5,1.5,0
+"407",7028,115708,76188,"Philippines","PHL","Underlying",2021-07-22,2021-07-21,1.5,1.5,0
+"408",7042,115722,76202,"Philippines","PHL","Emerging",2021-07-22,2021-07-21,1,1,0
+"409",7073,115753,76233,"Palau","PLW","Overall",2021-07-22,2021-07-21,0,0,0
+"410",7080,115760,76240,"Palau","PLW","Underlying",2021-07-22,2021-07-21,0.5,0.5,0
+"411",7094,115774,76254,"Palau","PLW","Emerging",2021-07-22,2021-07-21,0,0,0
+"412",7125,115805,76285,"Papua New Guinea","PNG","Overall",2021-07-22,2021-07-21,4,4,0
+"413",7132,115812,76292,"Papua New Guinea","PNG","Underlying",2021-07-22,2021-07-21,3.5,3.5,0
+"414",7146,115826,76306,"Papua New Guinea","PNG","Emerging",2021-07-22,2021-07-21,3,2.5,0.5
+"415",7177,115857,76337,"Poland","POL","Overall",2021-07-22,2021-07-21,0.5,0.5,0
+"416",7184,115864,76344,"Poland","POL","Underlying",2021-07-22,2021-07-21,0,0,0
+"417",7198,115878,76358,"Poland","POL","Emerging",2021-07-22,2021-07-21,1.5,1.5,0
+"418",7229,115909,76389,"Korea DPR","PRK","Overall",2021-07-22,2021-07-21,1,1,0
+"419",7236,115916,76396,"Korea DPR","PRK","Underlying",2021-07-22,2021-07-21,2.5,2.5,0
+"420",7250,115930,76410,"Korea DPR","PRK","Emerging",2021-07-22,2021-07-21,1,1,0
+"421",7281,115961,76441,"Portugal","PRT","Overall",2021-07-22,2021-07-21,0.5,0.5,0
+"422",7288,115968,76448,"Portugal","PRT","Underlying",2021-07-22,2021-07-21,0,0,0
+"423",7302,115982,76462,"Portugal","PRT","Emerging",2021-07-22,2021-07-21,2.5,2.5,0
+"424",7333,116013,76493,"Paraguay","PRY","Overall",2021-07-22,2021-07-21,1.5,1.5,0
+"425",7340,116020,76500,"Paraguay","PRY","Underlying",2021-07-22,2021-07-21,0,0,0
+"426",7354,116034,76514,"Paraguay","PRY","Emerging",2021-07-22,2021-07-21,1.5,1.5,0
+"427",7385,116065,76545,"Qatar","QAT","Overall",2021-07-22,2021-07-21,0.5,0.5,0
+"428",7392,116072,76552,"Qatar","QAT","Underlying",2021-07-22,2021-07-21,0,0,0
+"429",7406,116086,76566,"Qatar","QAT","Emerging",2021-07-22,2021-07-21,1.5,1.5,0
+"430",7437,116117,76597,"Romania","ROU","Overall",2021-07-22,2021-07-21,0.5,0.5,0
+"431",7444,116124,76604,"Romania","ROU","Underlying",2021-07-22,2021-07-21,0,0,0
+"432",7458,116138,76618,"Romania","ROU","Emerging",2021-07-22,2021-07-21,0.5,0.5,0
+"433",7489,116169,76649,"Russian Federation","RUS","Overall",2021-07-22,2021-07-21,1.5,1.5,0
+"434",7496,116176,76656,"Russian Federation","RUS","Underlying",2021-07-22,2021-07-21,0.5,0.5,0
+"435",7510,116190,76670,"Russian Federation","RUS","Emerging",2021-07-22,2021-07-21,1.5,1.5,0
+"436",7541,116221,76701,"Rwanda","RWA","Overall",2021-07-22,2021-07-21,1.5,1.5,0
+"437",7548,116228,76708,"Rwanda","RWA","Underlying",2021-07-22,2021-07-21,1.5,1.5,0
+"438",7562,116242,76722,"Rwanda","RWA","Emerging",2021-07-22,2021-07-21,0.5,0.5,0
+"439",7593,116273,76753,"Saudi Arabia","SAU","Overall",2021-07-22,2021-07-21,0.5,0.5,0
+"440",7600,116280,76760,"Saudi Arabia","SAU","Underlying",2021-07-22,2021-07-21,0,0,0
+"441",7614,116294,76774,"Saudi Arabia","SAU","Emerging",2021-07-22,2021-07-21,1.5,1.5,0
+"442",7645,116325,76805,"Sudan","SDN","Overall",2021-07-22,2021-07-21,4.5,4.5,0
+"443",7652,116332,76812,"Sudan","SDN","Underlying",2021-07-22,2021-07-21,4,4,0
+"444",7666,116346,76826,"Sudan","SDN","Emerging",2021-07-22,2021-07-21,3.5,3.5,0
+"445",7697,116377,76857,"Senegal","SEN","Overall",2021-07-22,2021-07-21,2,2,0
+"446",7704,116384,76864,"Senegal","SEN","Underlying",2021-07-22,2021-07-21,1.5,1.5,0
+"447",7718,116398,76878,"Senegal","SEN","Emerging",2021-07-22,2021-07-21,2.5,2.5,0
+"448",7749,116429,76909,"Singapore","SGP","Overall",2021-07-22,2021-07-21,0,0,0
+"449",7756,116436,76916,"Singapore","SGP","Underlying",2021-07-22,2021-07-21,0,0,0
+"450",7770,116450,76930,"Singapore","SGP","Emerging",2021-07-22,2021-07-21,2,2,0
+"451",7801,116481,76961,"Solomon Islands","SLB","Overall",2021-07-22,2021-07-21,2,2,0
+"452",7808,116488,76968,"Solomon Islands","SLB","Underlying",2021-07-22,2021-07-21,3,3,0
+"453",7822,116502,76982,"Solomon Islands","SLB","Emerging",2021-07-22,2021-07-21,1,1,0
+"454",7853,116533,77013,"Sierra Leone","SLE","Overall",2021-07-22,2021-07-21,3,3,0
+"455",7860,116540,77020,"Sierra Leone","SLE","Underlying",2021-07-22,2021-07-21,2.5,2.5,0
+"456",7874,116554,77034,"Sierra Leone","SLE","Emerging",2021-07-22,2021-07-21,2,2,0
+"457",7905,116585,77065,"El Salvador","SLV","Overall",2021-07-22,2021-07-21,2,2,0
+"458",7912,116592,77072,"El Salvador","SLV","Underlying",2021-07-22,2021-07-21,0.5,0.5,0
+"459",7926,116606,77086,"El Salvador","SLV","Emerging",2021-07-22,2021-07-21,2,2,0
+"460",7957,116637,77117,"Somalia","SOM","Overall",2021-07-22,2021-07-21,5,5,0
+"461",7964,116644,77124,"Somalia","SOM","Underlying",2021-07-22,2021-07-21,4,4,0
+"462",7978,116658,77138,"Somalia","SOM","Emerging",2021-07-22,2021-07-21,4.5,4.5,0
+"463",8009,116689,77169,"Serbia","SRB","Overall",2021-07-22,2021-07-21,0.5,0.5,0
+"464",8016,116696,77176,"Serbia","SRB","Underlying",2021-07-22,2021-07-21,0,0,0
+"465",8030,116710,77190,"Serbia","SRB","Emerging",2021-07-22,2021-07-21,2,2,0
+"466",8061,116741,77221,"South Sudan","SSD","Overall",2021-07-22,2021-07-21,4,4,0
+"467",8068,116748,77228,"South Sudan","SSD","Underlying",2021-07-22,2021-07-21,4,4,0
+"468",8082,116762,77242,"South Sudan","SSD","Emerging",2021-07-22,2021-07-21,3.5,3.5,0
+"469",8113,116793,77273,"Sao Tome and Principe","STP","Overall",2021-07-22,2021-07-21,1.5,1.5,0
+"470",8120,116800,77280,"Sao Tome and Principe","STP","Underlying",2021-07-22,2021-07-21,2,2,0
+"471",8134,116814,77294,"Sao Tome and Principe","STP","Emerging",2021-07-22,2021-07-21,1,1,0
+"472",8165,116845,77325,"Suriname","SUR","Overall",2021-07-22,2021-07-21,1.5,1.5,0
+"473",8172,116852,77332,"Suriname","SUR","Underlying",2021-07-22,2021-07-21,0.5,0.5,0
+"474",8186,116866,77346,"Suriname","SUR","Emerging",2021-07-22,2021-07-21,1.5,1.5,0
+"475",8217,116897,77377,"Slovakia","SVK","Overall",2021-07-22,2021-07-21,0.5,0.5,0
+"476",8224,116904,77384,"Slovakia","SVK","Underlying",2021-07-22,2021-07-21,0,0,0
+"477",8238,116918,77398,"Slovakia","SVK","Emerging",2021-07-22,2021-07-21,1,1,0
+"478",8269,116949,77429,"Slovenia","SVN","Overall",2021-07-22,2021-07-21,0.5,0.5,0
+"479",8276,116956,77436,"Slovenia","SVN","Underlying",2021-07-22,2021-07-21,0,0,0
+"480",8290,116970,77450,"Slovenia","SVN","Emerging",2021-07-22,2021-07-21,1.5,1.5,0
+"481",8321,117001,77481,"Sweden","SWE","Overall",2021-07-22,2021-07-21,0,0,0
+"482",8328,117008,77488,"Sweden","SWE","Underlying",2021-07-22,2021-07-21,0,0,0
+"483",8342,117022,77502,"Sweden","SWE","Emerging",2021-07-22,2021-07-21,0.5,0.5,0
+"484",8373,117053,77533,"Eswatini","SWZ","Overall",2021-07-22,2021-07-21,2,2,0
+"485",8380,117060,77540,"Eswatini","SWZ","Underlying",2021-07-22,2021-07-21,1.5,1.5,0
+"486",8394,117074,77554,"Eswatini","SWZ","Emerging",2021-07-22,2021-07-21,2.5,2.5,0
+"487",8425,117105,77585,"Seychelles","SYC","Overall",2021-07-22,2021-07-21,1.5,1.5,0
+"488",8432,117112,77592,"Seychelles","SYC","Underlying",2021-07-22,2021-07-21,0.5,0.5,0
+"489",8446,117126,77606,"Seychelles","SYC","Emerging",2021-07-22,2021-07-21,1.5,1.5,0
+"490",8477,117157,77637,"Syria","SYR","Overall",2021-07-22,2021-07-21,5,5,0
+"491",8484,117164,77644,"Syria","SYR","Underlying",2021-07-22,2021-07-21,3.5,3.5,0
+"492",8498,117178,77658,"Syria","SYR","Emerging",2021-07-22,2021-07-21,3,3,0
+"493",8529,117209,77689,"Chad","TCD","Overall",2021-07-22,2021-07-21,4.5,4.5,0
+"494",8536,117216,77696,"Chad","TCD","Underlying",2021-07-22,2021-07-21,4,4,0
+"495",8550,117230,77710,"Chad","TCD","Emerging",2021-07-22,2021-07-21,3,2.5,0.5
+"496",8581,117261,77741,"Togo","TGO","Overall",2021-07-22,2021-07-21,1.5,1.5,0
+"497",8588,117268,77748,"Togo","TGO","Underlying",2021-07-22,2021-07-21,1.5,1.5,0
+"498",8602,117282,77762,"Togo","TGO","Emerging",2021-07-22,2021-07-21,1,1,0
+"499",8633,117313,77793,"Thailand","THA","Overall",2021-07-22,2021-07-21,0.5,0.5,0
+"500",8640,117320,77800,"Thailand","THA","Underlying",2021-07-22,2021-07-21,0.5,0.5,0
+"501",8654,117334,77814,"Thailand","THA","Emerging",2021-07-22,2021-07-21,0,0,0
+"502",8685,117365,77845,"Tajikistan","TJK","Overall",2021-07-22,2021-07-21,3,3,0
+"503",8692,117372,77852,"Tajikistan","TJK","Underlying",2021-07-22,2021-07-21,2,2,0
+"504",8706,117386,77866,"Tajikistan","TJK","Emerging",2021-07-22,2021-07-21,2,2,0
+"505",8737,117417,77897,"Turkmenistan","TKM","Overall",2021-07-22,2021-07-21,1,1,0
+"506",8744,117424,77904,"Turkmenistan","TKM","Underlying",2021-07-22,2021-07-21,1.5,1.5,0
+"507",8758,117438,77918,"Turkmenistan","TKM","Emerging",2021-07-22,2021-07-21,1,1,0
+"508",8789,117469,77949,"Timor-Leste","TLS","Overall",2021-07-22,2021-07-21,1.5,1.5,0
+"509",8796,117476,77956,"Timor-Leste","TLS","Underlying",2021-07-22,2021-07-21,2.5,2.5,0
+"510",8810,117490,77970,"Timor-Leste","TLS","Emerging",2021-07-22,2021-07-21,0.5,0.5,0
+"511",8841,117521,78001,"Tonga","TON","Overall",2021-07-22,2021-07-21,3,3,0
+"512",8848,117528,78008,"Tonga","TON","Underlying",2021-07-22,2021-07-21,1.5,1.5,0
+"513",8862,117542,78022,"Tonga","TON","Emerging",2021-07-22,2021-07-21,1.5,1.5,0
+"514",8893,117573,78053,"Trinidad and Tobago","TTO","Overall",2021-07-22,2021-07-21,1,1,0
+"515",8900,117580,78060,"Trinidad and Tobago","TTO","Underlying",2021-07-22,2021-07-21,0,0,0
+"516",8914,117594,78074,"Trinidad and Tobago","TTO","Emerging",2021-07-22,2021-07-21,0.5,0.5,0
+"517",8945,117625,78105,"Tunisia","TUN","Overall",2021-07-22,2021-07-21,2.5,2.5,0
+"518",8952,117632,78112,"Tunisia","TUN","Underlying",2021-07-22,2021-07-21,0.5,0.5,0
+"519",8966,117646,78126,"Tunisia","TUN","Emerging",2021-07-22,2021-07-21,3.5,3.5,0
+"520",8997,117677,78157,"Turkey","TUR","Overall",2021-07-22,2021-07-21,1,1,0
+"521",9004,117684,78164,"Turkey","TUR","Underlying",2021-07-22,2021-07-21,0.5,0.5,0
+"522",9018,117698,78178,"Turkey","TUR","Emerging",2021-07-22,2021-07-21,0.5,0.5,0
+"523",9049,117729,78209,"Tuvalu","TUV","Overall",2021-07-22,2021-07-21,0.5,0.5,0
+"524",9056,117736,78216,"Tuvalu","TUV","Underlying",2021-07-22,2021-07-21,2,2,0
+"525",9070,117750,78230,"Tuvalu","TUV","Emerging",2021-07-22,2021-07-21,1,1,0
+"526",9101,117781,78261,"Tanzania","TZA","Overall",2021-07-22,2021-07-21,2.5,2.5,0
+"527",9108,117788,78268,"Tanzania","TZA","Underlying",2021-07-22,2021-07-21,1.5,1.5,0
+"528",9122,117802,78282,"Tanzania","TZA","Emerging",2021-07-22,2021-07-21,1,1,0
+"529",9153,117833,78313,"Uganda","UGA","Overall",2021-07-22,2021-07-21,2.5,2.5,0
+"530",9160,117840,78320,"Uganda","UGA","Underlying",2021-07-22,2021-07-21,3,3,0
+"531",9174,117854,78334,"Uganda","UGA","Emerging",2021-07-22,2021-07-21,2,2,0
+"532",9205,117885,78365,"Ukraine","UKR","Overall",2021-07-22,2021-07-21,1.5,1.5,0
+"533",9212,117892,78372,"Ukraine","UKR","Underlying",2021-07-22,2021-07-21,0.5,0.5,0
+"534",9226,117906,78386,"Ukraine","UKR","Emerging",2021-07-22,2021-07-21,1,1,0
+"535",9257,117937,78417,"Uruguay","URY","Overall",2021-07-22,2021-07-21,0.5,0.5,0
+"536",9264,117944,78424,"Uruguay","URY","Underlying",2021-07-22,2021-07-21,0,0,0
+"537",9278,117958,78438,"Uruguay","URY","Emerging",2021-07-22,2021-07-21,1,1,0
+"538",9309,117989,78469,"United States of America","USA","Overall",2021-07-22,2021-07-21,1,1,0
+"539",9316,117996,78476,"United States of America","USA","Underlying",2021-07-22,2021-07-21,0.5,0.5,0
+"540",9330,118010,78490,"United States of America","USA","Emerging",2021-07-22,2021-07-21,3,3,0
+"541",9361,118041,78521,"Uzbekistan","UZB","Overall",2021-07-22,2021-07-21,3,3,0
+"542",9368,118048,78528,"Uzbekistan","UZB","Underlying",2021-07-22,2021-07-21,2,2,0
+"543",9382,118062,78542,"Uzbekistan","UZB","Emerging",2021-07-22,2021-07-21,1,1,0
+"544",9413,118093,78573,"Saint Vincent and the Grenadines","VCT","Overall",2021-07-22,2021-07-21,0,0,0
+"545",9420,118100,78580,"Saint Vincent and the Grenadines","VCT","Underlying",2021-07-22,2021-07-21,0.5,0.5,0
+"546",9434,118114,78594,"Saint Vincent and the Grenadines","VCT","Emerging",2021-07-22,2021-07-21,0,0,0
+"547",9465,118145,78625,"Venezuela","VEN","Overall",2021-07-22,2021-07-21,4,4,0
+"548",9472,118152,78632,"Venezuela","VEN","Underlying",2021-07-22,2021-07-21,3,3,0
+"549",9486,118166,78646,"Venezuela","VEN","Emerging",2021-07-22,2021-07-21,2,2,0
+"550",9517,118197,78677,"Viet Nam","VNM","Overall",2021-07-22,2021-07-21,1,1.5,-0.5
+"551",9524,118204,78684,"Viet Nam","VNM","Underlying",2021-07-22,2021-07-21,1,1,0
+"552",9538,118218,78698,"Viet Nam","VNM","Emerging",2021-07-22,2021-07-21,1,1,0
+"553",9569,118249,78729,"Vanuatu","VUT","Overall",2021-07-22,2021-07-21,2,2,0
+"554",9576,118256,78736,"Vanuatu","VUT","Underlying",2021-07-22,2021-07-21,2,2,0
+"555",9590,118270,78750,"Vanuatu","VUT","Emerging",2021-07-22,2021-07-21,1,1,0
+"556",9621,118301,78781,"Samoa","WSM","Overall",2021-07-22,2021-07-21,0,0,0
+"557",9628,118308,78788,"Samoa","WSM","Underlying",2021-07-22,2021-07-21,1,1,0
+"558",9642,118322,78802,"Samoa","WSM","Emerging",2021-07-22,2021-07-21,0,0,0
+"559",9673,118353,78833,"Yemen","YEM","Overall",2021-07-22,2021-07-21,3,3,0
+"560",9680,118360,78840,"Yemen","YEM","Underlying",2021-07-22,2021-07-21,4,4,0
+"561",9694,118374,78854,"Yemen","YEM","Emerging",2021-07-22,2021-07-21,3.5,3,0.5
+"562",9725,118405,78885,"South Africa","ZAF","Overall",2021-07-22,2021-07-21,2.5,2.5,0
+"563",9732,118412,78892,"South Africa","ZAF","Underlying",2021-07-22,2021-07-21,0,0,0
+"564",9746,118426,78906,"South Africa","ZAF","Emerging",2021-07-22,2021-07-21,3.5,3.5,0
+"565",9777,118457,78937,"Zambia","ZMB","Overall",2021-07-22,2021-07-21,3.5,3.5,0
+"566",9784,118464,78944,"Zambia","ZMB","Underlying",2021-07-22,2021-07-21,2.5,2.5,0
+"567",9798,118478,78958,"Zambia","ZMB","Emerging",2021-07-22,2021-07-21,2.5,2.5,0
+"568",9829,118509,78989,"Zimbabwe","ZWE","Overall",2021-07-22,2021-07-21,5,5,0
+"569",9836,118516,78996,"Zimbabwe","ZWE","Underlying",2021-07-22,2021-07-21,4,4,0
+"570",9850,118530,79010,"Zimbabwe","ZWE","Emerging",2021-07-22,2021-07-21,4,4,0
