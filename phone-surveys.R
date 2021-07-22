@@ -13,7 +13,10 @@
 #   }
 # )
 
-phone_data <- read_excel("/Users/bennotkin/Downloads/Phone_surveys_June.xlsx",
+# phone_data <- read_excel("/Users/bennotkin/Downloads/Phone_surveys_June.xlsx",
+#                          sheet = "2. Harmonized Indicators")
+
+phone_data <- read_excel("/Users/bennotkin/Downloads/data-coviddash-latest-2.xlsx",
                          sheet = "2. Harmonized Indicators")
   
 phone_compile <- phone_data %>%
@@ -27,13 +30,14 @@ phone_compile <- phone_data %>%
   # Drop "Able to access any staple food in the past 7 days - first 3 staple food items (% of HHs)"
   filter(indicator_display != "Able to access any staple food in the past 7 days - first 3 staple food items (% of HHs)")
 
-phone_unique <- phone_compile %>% distinct(code, indicator_description, .keep_all = T)
+phone_unique <- phone_compile %>% 
+  distinct(code, indicator_description, .keep_all = T)
 
-phone_data <- phone_unique %>%
+phone_wide <- phone_unique %>%
   dplyr::select(code, indicator_description, indicator_val) %>%
   pivot_wider(names_from = indicator_description, values_from = indicator_val  )
 
-phone_index <-phone_data %>%
+phone_index <-phone_wide %>%
   dplyr::select(
     "code", #"% of respondents currently employed/working",  
     "% of respondents who have stopped working since COVID-19 outbreak", 
