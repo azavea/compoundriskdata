@@ -14,8 +14,8 @@ librarian::shelf(
   stats, curl,  ggplot2, readr, 
   )
 
-github <- "https://raw.githubusercontent.com/ljonestz/compoundriskdata/master/"
-# github <- "https://raw.githubusercontent.com/bennotkin/compoundriskdata/docker/"
+# github <- "https://raw.githubusercontent.com/ljonestz/compoundriskdata/master/"
+github <- "https://raw.githubusercontent.com/bennotkin/compoundriskdata/master/"
 
 {
 #--------------------FUNCTION TO CALCULATE NORMALISED SCORES-----------------
