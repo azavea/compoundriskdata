@@ -3,17 +3,16 @@
 #  CODE USED TO TO PRODUCE INDIVIDUAL INDICATOR DATASETS AND RISK COMPONENT SHEETS
 #
 ####
-#--------------------LOAD PACKAGES-----------------------------------------
-# packagesAll <- c("cowplot", "lubridate", "rvest", "viridis", "countrycode", 
-#                  "clipr", "awalker89", "openxlsx", "dplyr", "readxl", "gsheet",
-#                  "zoo", "wppExplorer", "haven", "EnvStats", "jsonlite", 
-#                  "matrixStats", "ggalt", "raster", "sf", "mapview", "maptools", 
-#                  "ggthemes", "tidyverse", "sjmsc", "googledrive", "rgdal")
 
-packages <- c("curl", "dplyr", "EnvStats", "stats", "countrycode", "ggplot2", 
-              "jsonlite","lubridate", "matrixStats", "readr", "readxl", "rvest",   
-              "sjmisc", "stringr", "tidyr", "xml2", "zoo")
-invisible(lapply(packages, require, quietly = TRUE, character.only = TRUE))
+#--------------------LOAD PACKAGES-----------------------------------------
+# install.packages("librarian")     #Run if librarian is not already installed
+librarian::shelf(
+  lubridate, rvest, countrycode,
+  dplyr, readxl,
+  zoo, EnvStats, jsonlite, matrixStats,
+  sjmisc, stringr, tidyr, xml2, 
+  stats, curl,  ggplot2, readr, 
+  )
 
 github <- "https://raw.githubusercontent.com/ljonestz/compoundriskdata/master/"
 # github <- "https://raw.githubusercontent.com/bennotkin/compoundriskdata/docker/"
@@ -285,10 +284,10 @@ colnames(covidgrowth) <- c(
 
 # Varibles on number of cases
 covidcurrent <- covid %>% 
+  # Now selecting the most recent date for each country
+  # instead of just yesterday's
   group_by(iso_code) %>%
   top_n(n = 1, date) %>%
-  # filter(date == Sys.Date() - 1) %>%
-  # filter(date == max(date)) %>% # This does not select the most recent date for each country
   dplyr::select(iso_code, new_cases_smoothed_per_million, new_deaths_smoothed_per_million) %>%
   rename(Country = iso_code)
 
@@ -504,7 +503,6 @@ health_sheet <- left_join(countrylist, HIS, by = "Country") %>%
 
 write.csv(health_sheet, "Risk_sheets/healthsheet.csv")
 print("Health sheet written")
-
 #
 ##
 ### ********************************************************************************************
@@ -1399,27 +1397,8 @@ conflict_dataset_raw <- left_join(fcv, reign, by = "Country") %>%
 #dplyr::select(Countryname, FCV_normalised, pol_trigger_norm, z_idps_norm, fatal_z_norm) 
 
 conflict_dataset <- conflict_dataset_raw %>%
-  # mutate(
-  #   flag_count = as.numeric(unlist(row_count(
-  #     .,
-  #     pol_trigger_norm:fatal_z_norm,
-  #     count = 10,
-  #     append = F
-  #   ))),
-  #   fragile_1_flag = case_when(
-  #     flag_count >= 1 ~ 10,
-  #     TRUE ~ suppressWarnings(apply(conflict_dataset_raw %>% dplyr::select(pol_trigger_norm:fatal_z_norm), 
-  #                  1,
-#                  FUN = max,
-#                  na.rm = T)
-#   )),
-#   fragile_1_flag = case_when(
-#     fragile_1_flag == -Inf ~ NA_real_,
-#     TRUE ~ fragile_1_flag
-#   )) %>%
 rename(FCS_Normalised = FCV_normalised, REIGN_Normalised = pol_trigger_norm,
         Displaced_UNHCR_Normalised = z_idps_norm, BRD_Normalised = fatal_z_norm#,
-        # Number_of_High_Risk_Flags = flag_count, Overall_Conflict_Risk_Score = fragile_1_flag
 ) 
 
 #-------------------------------------—Create Fragility sheet--------------------------------------
@@ -1428,7 +1407,6 @@ countrylist <- read.csv(paste0(github, "Indicator_dataset/countrylist.csv"))
 
 fragility_sheet <- left_join(countrylist, conflict_dataset, by = "Country") %>%
   dplyr::select(-X) %>%
-  # dplyr::select(-X, -Number_of_High_Risk_Flags) %>%
   rename_with(
     .fn = ~ paste0("Fr_", .), 
     .cols = colnames(.)[!colnames(.) %in% c("Country", "Countryname") ]
