@@ -14,8 +14,10 @@ librarian::shelf(
   stats, curl,  ggplot2, readr, 
   )
 
-# github <- "https://raw.githubusercontent.com/ljonestz/compoundriskdata/master/"
+# CHANGE: Saving URL string as a variable, to more easily redirect CRM GitHub links
+# This is the reason for all of the `read.csv(paste0(github, ...))` changes
 github <- "https://raw.githubusercontent.com/bennotkin/compoundriskdata/master/"
+# github <- "https://raw.githubusercontent.com/ljonestz/compoundriskdata/master/"
 
 {
 #--------------------FUNCTION TO CALCULATE NORMALISED SCORES-----------------
@@ -167,6 +169,7 @@ acapssheet <- countrylist %>%
 
 # Write ACAPS sheet
 write.csv(acapssheet, "Risk_sheets/acapssheet.csv")
+
 print("ACAPS sheet written")
 
 #
@@ -284,7 +287,7 @@ colnames(covidgrowth) <- c(
 
 # Varibles on number of cases
 covidcurrent <- covid %>% 
-  # Now selecting the most recent date for each country
+  # CHANGE: Now selecting the most recent date for each country
   # instead of just yesterday's
   group_by(iso_code) %>%
   top_n(n = 1, date) %>%
@@ -721,6 +724,7 @@ print("Food sheet written")
 #
 
 #---------------------------—Economist Intelligence Unit---------------------------------
+# CHANGE: Pointing to updated dataset
 url <- "https://github.com/ljonestz/compoundriskdata/blob/master/Indicator_dataset/RBTracker%20(4).xls?raw=true"
 destfile <- "RBTracker(4).xls"
 curl::curl_download(url, destfile)
@@ -741,6 +745,7 @@ eiu_latest_month <- eiu_data %>%
   pivot_wider(
     names_from = `SERIES NAME`,
     values_from = Values
+  # CHANGE: Making Macroneconomic_risk the average of 3 variables (month)
   ) %>%
   rename(Macroeconomic_risk = `Macroeconomic risk`) %>%
   mutate(Macroeconomic_risk = (`Financial risk` + Macroeconomic_risk + `Foreign trade & payments risk`) / 3)
@@ -764,6 +769,7 @@ eiu_one_year <- eiu_data %>%
   rename_with(
     .col = c(contains("risk"), contains("Overall")),
     .fn  = ~ paste0(., "_12")
+  # CHANGE: Making Macroneconomic_risk the average of 3 variables (year)
   ) %>%
   rename(Macroeconomic_risk_12 = `Macroeconomic risk_12`) %>%
   mutate(Macroeconomic_risk_12 = (`Financial risk_12` + Macroeconomic_risk_12 + `Foreign trade & payments risk_12`) / 3)
@@ -788,7 +794,8 @@ eiu_three_month <- eiu_data %>%
   rename_with(
     .col = c(contains("risk"), contains("Overall")),
     .fn  = ~ paste0(., "_3")
-  ) %>%
+    # CHANGE: Making Macroneconomic_risk the average of 3 variables (3 month)
+    ) %>%
   rename(Macroeconomic_risk_3 = `Macroeconomic risk_3`) %>%
   mutate(Macroeconomic_risk_3 = (`Financial risk_3` + Macroeconomic_risk_3 + `Foreign trade & payments risk_3`) / 3)
 
@@ -796,14 +803,18 @@ eiu_three_month <- eiu_data %>%
 eiu_joint <- left_join(eiu_latest_month, eiu_three_month, by = "Country") %>%
   left_join(., eiu_one_year, by = "Country") %>%
   mutate(
+    # CHANGE: Redefining EIU_... variables using the new Macro_economic_risk variables added above
     EIU_3m_change = Macroeconomic_risk - Macroeconomic_risk_3,
     EIU_12m_change = Macroeconomic_risk - Macroeconomic_risk_12
   ) %>%
   dplyr::select(contains("Country"), contains("Macro"), contains("EIU")) %>%
   rename_with(
+    # CHANGE: Now renaming columns that contain "Macro" instead of columns containing "Overall"
     .col = c(contains("Macro"), contains("EIU")),
     .fn = ~ paste0("M_", .)
   ) %>%
+  # CHANGE: Changing the variable that is renamed. Now renaming M_Macroeconomic_risk instead of 
+  # M_Overall Evaluation
   rename(M_EIU_Score = `M_Macroeconomic_risk`,
           M_EIU_Score_12m = `M_Macroeconomic_risk_12`) %>%
   # Add Country name
@@ -814,6 +825,7 @@ eiu_joint <- left_join(eiu_latest_month, eiu_three_month, by = "Country") %>%
                                             nomatch = NULL))
   )
 
+# CHANGE: Using new normalization thresholds: (90th and 10th percentiles)
 eiu_joint <- normfuncpos(eiu_joint, quantile(eiu_joint$M_EIU_Score, 0.90), quantile(eiu_joint$M_EIU_Score, 0.10), "M_EIU_Score")
 eiu_joint <- normfuncpos(eiu_joint, quantile(eiu_joint$M_EIU_12m_change, 0.90), quantile(eiu_joint$M_EIU_12m_change, 0.10), "M_EIU_12m_change")
 eiu_joint <- normfuncpos(eiu_joint, quantile(eiu_joint$M_EIU_Score_12m, 0.90), quantile(eiu_joint$M_EIU_Score_12m, 0.10), "M_EIU_Score_12m")
@@ -879,6 +891,8 @@ socio_forward <- inform_covid_warning %>%
     ))
 
 #--------------------------—MPO: Poverty projections----------------------------------------------------
+# CHANGE: MPO data is now processed separately.
+# Now only need to read in the processed data.
 mpo_data <- read.csv("https://raw.githubusercontent.com/bennotkin/compoundriskdata/docker/Indicator_dataset/mpo.csv")
 
 #-----------------------------—HOUSEHOLD HEATMAP FROM MACROFIN-------------------------------------
@@ -906,6 +920,8 @@ macrofin <- normfuncpos(macrofin, 2.1, 0, "M_macrofin_risk")
 
 household_risk <- macrofin %>%
   dplyr::select(Country, M_Household.risks) %>%
+  # CHANGE: Saving the raw data for household risks, before transforming the data to 7s and 10s 
+  # Should be irrelevant to Azavea updates
   mutate(M_Household.risks_raw = M_Household.risks,
           M_Household.risks = case_when(
             M_Household.risks == 0.5 ~ 7,
@@ -916,7 +932,9 @@ household_risk <- macrofin %>%
           S_Household.risks_raw = M_Household.risks_raw)
 
 #----------------------------—WB PHONE SURVEYS-----------------------------------------------------
-phone_index_data <- read.csv("https://raw.githubusercontent.com/bennotkin/compoundriskdata/docker/Indicator_dataset/phone.csv")
+# CHANGE: Now processing phone survey data separetly.
+# Only need to read in phone data from github
+phone_index_data <- read.csv("https://raw.githubusercontent.com/bennotkin/compoundriskdata/master/Indicator_dataset/phone.csv")
 
 #------------------------------—IMF FORECASTED UNEMPLOYMENT-----------------------------------------
 imf_un <- read.csv(paste0(github, "Indicator_dataset/imf_unemployment.csv"))
@@ -1113,6 +1131,7 @@ gdac <- gdac %>%
   mutate(NH_GDAC_Hazard_Score_Norm = case_when(
     NH_GDAC_Hazard_Status == "active" & NH_GDAC_Hazard_Severity == "orange" ~ 10,
     TRUE ~ 0
+  # CHANGE: Saving raw version of NH_GDAC_Hazard_Score; probably unnecessary for Azavea
   ),
   NH_GDAC_Hazard_Score = paste(NH_GDAC_Hazard_Status, NH_GDAC_Hazard_Severity, sep = " - ")
   ) %>%
@@ -1280,6 +1299,7 @@ acled <- acled_data$data %>%
     month_yr = as.yearmon(date)
   ) %>%
   # Remove dates for the latest month (or month that falls under the prior 6 weeks)
+  # CHANGE: Putting `date` variable into year-month format to compare with system date, in year-month format
   filter(as.Date(as.yearmon(date)) <= as.Date(as.yearmon(Sys.Date() - 45))) %>% 
   group_by(iso3, month_yr) %>%
   summarise(fatal_month = sum(fatalities, na.rm = T),
@@ -1322,6 +1342,7 @@ acled <- acled %>%
   dplyr::select(-iso3)
 
 #--------------------------—REIGN--------------------------------------------
+# CHANGE: Code looks for most recent REIGN dataset, so it doesn't need to be manually updated
 # reign_data <- suppressMessages(read_csv("https://cdn.rawgit.com/OEFDataScience/REIGN.github.io/gh-pages/data_sets/REIGN_2021_5.csv", col_types = cols()))
 
 month <- as.numeric(format(Sys.Date(),"%m"))
@@ -1394,6 +1415,7 @@ reign <- left_join(reign_start, fcv %>% dplyr::select(Country, FCV_normalised), 
 conflict_dataset_raw <- left_join(fcv, reign, by = "Country") %>%
   left_join(., idp, by = "Country") %>%
   left_join(., acled, by = "Country") #%>%
+# CHANGE: Removing unecessary code; no longer creating variables that are never used;
 #dplyr::select(Countryname, FCV_normalised, pol_trigger_norm, z_idps_norm, fatal_z_norm) 
 
 conflict_dataset <- conflict_dataset_raw %>%
@@ -1405,6 +1427,7 @@ rename(FCS_Normalised = FCV_normalised, REIGN_Normalised = pol_trigger_norm,
 # Compile joint database
 countrylist <- read.csv(paste0(github, "Indicator_dataset/countrylist.csv"))
 
+# CHANGE: Changing which column is used for joining (forget why this was necessary)
 fragility_sheet <- left_join(countrylist, conflict_dataset, by = "Country") %>%
   dplyr::select(-X) %>%
   rename_with(
@@ -1415,4 +1438,6 @@ fragility_sheet <- left_join(countrylist, conflict_dataset, by = "Country") %>%
 write.csv(fragility_sheet, "Risk_sheets/fragilitysheet.csv")
 print("Fragility sheet written")
 
+# CHANGE: Secondary output sheets are now written in a separate file.
+# Can remain included if needed.
 }

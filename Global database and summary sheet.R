@@ -47,6 +47,7 @@ countrylist <- read.csv("https://raw.githubusercontent.com/ljonestz/compoundrisk
 globalrisk <- left_join(countrylist, healthsheet, by = c("Countryname", "Country")) %>%
   left_join(., foodsecurity, by = c("Countryname", "Country")) %>%
   # left_join(., debtsheet, by = c("Countryname", "Country")) %>%
+  # CHANGE: Changed the column that fragilitysheet usees to join with
   left_join(., fragilitysheet, by = c("Country")) %>%
   left_join(., macrosheet, by = c("Countryname", "Country")) %>%
   left_join(., Naturalhazardsheet, by = c("Countryname", "Country")) %>%
@@ -214,6 +215,8 @@ riskflags[paste0(names, "_plus1")] <- lapply(riskflags[names], function(xx) {
 riskflags <- riskflags %>%
   rowwise() %>%
   mutate(
+    # CHANGE: Here and below, replacing geometricmean with different mean function
+    # I believe just to reduce the number of packages used, or for how function treated 0s
     EMERGING_RISK_FRAGILITY_INSTITUTIONS_MULTIDIMENSIONAL = geoMean(c(
       EMERGING_RISK_FRAGILITY_INSTITUTIONS_plus1,
       EMERGING_RISK_MACRO_FISCAL_plus1),
@@ -315,6 +318,7 @@ altflag <- altflag %>%
       na.rm = T
     ),
     F_coefvar = cv(c(
+      # CHANGE: Including all Food indicators
       F_fews_crm_norm,
       F_fao_wfp_warning,
       F_fpv_rating),
@@ -686,6 +690,7 @@ reliable <- reliabilitysheet %>%
 globalrisk <- left_join(globalrisk, reliable, by = c("Countryname", "Country"))
 
 # Save database of all risk indicators (+ reliability scores)
+# CHANGE: Folder is actually named "Risk_sheets" not "Risk_Sheets"; capital S erroneously added at some point
 write.csv(globalrisk, "Risk_sheets/Global_compound_risk_database.csv")
 
 #------------------------------—Combine the reliability sheet with the summary risk flag sheet-----------------------------
@@ -703,7 +708,8 @@ riskflags <- left_join(riskflags %>%
 
 # Write csv file of all risk flags (+reliability scores)
 
+# CHANGE: Folder is actually named "Risk_sheets" not "Risk_Sheets"; capital S erroneously added at some point
 write.csv(riskflags, "Risk_sheets/Compound_Risk_Flag_Sheets.csv")
 }
 
-rmarkdown::render('output-report.Rmd', output_format = c("html_document", "pdf_document"), output_file = paste0(Sys.Date(), "-report") %>% rep(2))
+# CHANGE: Excel code is no longer used.
