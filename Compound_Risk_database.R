@@ -725,8 +725,8 @@ print("Food sheet written")
 
 #---------------------------—Economist Intelligence Unit---------------------------------
 # CHANGE: Pointing to updated dataset
-url <- "https://github.com/ljonestz/compoundriskdata/blob/master/Indicator_dataset/RBTracker%20(4).xls?raw=true"
-destfile <- "RBTracker(4).xls"
+url <- "https://github.com/bennotkin/compoundriskdata/blob/master/Indicator_dataset/RBTracker.xls"
+destfile <- "RBTracker.xls"
 curl::curl_download(url, destfile)
 eiu_data <- read_excel(destfile, sheet = "Data Values", skip = 3)
 
