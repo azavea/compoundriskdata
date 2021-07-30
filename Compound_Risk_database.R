@@ -535,7 +535,9 @@ proteus <- normfuncpos(proteus, upperrisk, lowerrisk, "F_Proteus_Score")
 #------------------—FEWSNET (with CRW threshold)---
 
 #Load database
-fewswb <- suppressMessages(read_csv(paste0(github, "Indicator_dataset/FEWS%20February%202021%20Update_04-05-21.csv"), col_types = cols()))
+# CHANGE: Source file has been renamed `fews.csv` ← `FEWS%20February%202021%20Update_04-05-21.csv`
+# for future consistency
+fewswb <- suppressMessages(read_csv(paste0(github, "Indicator_dataset/fews.csv"), col_types = cols()))
 
 #Calculate country totals
 fewsg <- fewswb %>%
@@ -653,6 +655,8 @@ ag_ob <- ag_ob_data %>%
   dplyr::select(-Income.Level, -Color.Bin, -X) %>%
   group_by(Country) %>%
   summarise(
+    # CHANGE: Adding Dec 2020 – Feb 2021 to account for new data
+    Mar = Mar.20[which(!is.na(Mar.20))[1]],
     Apr = Apr.20[which(!is.na(Apr.20))[1]],
     May = May.20[which(!is.na(May.20))[1]],
     June = Jun.20[which(!is.na(Jun.20))[1]],
@@ -661,11 +665,15 @@ ag_ob <- ag_ob_data %>%
     Sep = Sep.20[which(!is.na(Sep.20))[1]],
     Oct = Oct.20[which(!is.na(Oct.20))[1]],
     Nov = Nov.20[which(!is.na(Nov.20))[1]],
+    Dec = Dec.20[which(!is.na(Dec.20))[1]],
+    Jan = Jan.21[which(!is.na(Jan.21))[1]],
+    Feb = Feb.21[which(!is.na(Feb.21))[1]]
   ) %>%
   mutate(fpv = case_when(
-    !is.na(June) ~ June,
-    is.na(June) & !is.na(May) ~ May,
-    is.na(June) & is.na(May) & !is.na(Apr) ~ Apr,
+    # CHANGE: Updating which months to look at
+    !is.na(Feb) ~ Feb,
+    is.na(Feb) & !is.na(Jan) ~ Jan,
+    is.na(Feb) & is.na(Jan) & !is.na(Dec) ~ Nov,
     TRUE ~ NA_real_
   ),
   fpv_rating = case_when(
@@ -1248,7 +1256,8 @@ idp <- idp_data %>%
       TRUE ~ NA_character_
     )
   ) %>%
-  filter(Year == 2019) %>%
+  # CHANGE: Updating selection to 2020 from 2019
+  filter(Year == 2020) %>%
   dplyr::select(`Country of origin (ISO)`, refugees, z_refugees, refugees_fragile, idps, z_idps, idps_fragile)
 
 # Normalise scores
