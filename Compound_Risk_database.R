@@ -733,7 +733,7 @@ print("Food sheet written")
 
 #---------------------------—Economist Intelligence Unit---------------------------------
 # CHANGE: Pointing to updated dataset
-url <- "https://github.com/bennotkin/compoundriskdata/blob/master/Indicator_dataset/RBTracker.xls"
+url <- "https://github.com/bennotkin/compoundriskdata/blob/master/Indicator_dataset/RBTracker.xls?raw=true"
 destfile <- "RBTracker.xls"
 curl::curl_download(url, destfile)
 eiu_data <- read_excel(destfile, sheet = "Data Values", skip = 3)
@@ -942,7 +942,7 @@ household_risk <- macrofin %>%
 #----------------------------—WB PHONE SURVEYS-----------------------------------------------------
 # CHANGE: Now processing phone survey data separetly.
 # Only need to read in phone data from github
-phone_index_data <- read.csv("https://raw.githubusercontent.com/bennotkin/compoundriskdata/master/Indicator_dataset/phone.csv")
+phone_index_data <- read.csv(paste0(github, "Indicator_dataset/phone.csv"))
 
 #------------------------------—IMF FORECASTED UNEMPLOYMENT-----------------------------------------
 imf_un <- read.csv(paste0(github, "Indicator_dataset/imf_unemployment.csv"))
