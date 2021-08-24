@@ -12,7 +12,11 @@ Population types included,"REF,ROC,ASY,IDP,IOC,VDA,OOC,STA",,,,,
 Years:,,,,,,
 Origin:,all,,,,,
 Country of asylum:,all,,,,,
+<<<<<<< HEAD
 Year,Country of origin,Country of origin (ISO),Country of asylum,Country of asylum (ISO),Refugees under UNHCRÕs mandate,IDPs of concern to UNHCR
+=======
+Year,Country of origin,Country of origin (ISO),Country of asylum,Country of asylum (ISO),Refugees under UNHCR mandate,IDPs of concern to UNHCR
+>>>>>>> master
 2014,Afghanistan,AFG,Afghanistan,AFG,0,805409
 2014,Iran (Islamic Rep. of),IRN,Afghanistan,AFG,36,0
 2014,Pakistan,PAK,Afghanistan,AFG,300385,0

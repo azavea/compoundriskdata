@@ -8,7 +8,11 @@
 librarian::shelf(ggalt, raster, sf, mapview, maptools, ggthemes, tidyverse)
 
 # Load seasonal forecast image
-t <- raster("Plots/IRI_forecast_march.tiff")
+# Note that to extract the plot on IRI data portal need to make sure x coordinates are correct (-180, 180)
+# source: https://iridl.ldeo.columbia.edu/maproom/Global/Forecasts/NMME_Seasonal_Forecasts/Precipitation_ELR.html
+t <- raster("Plots/IRI_forecast_august_2021.tiff")
+# Change the name of the file so that is consistent for all future tiff images
+t@data@names <- "forecast_values"
 
 # Edit values by colour band (values can be accessed via attr(t[[1]], "colors"))
 values(t)[values(t == 0)] <- NA
@@ -36,7 +40,7 @@ wrld_simpl_sf <- sf::st_as_sf(wrld_simpl)
 
 # Plot seasonal forecast over world map
 seasonal_plot <- ggplot(tt) +
-  geom_raster(aes(x = x, y = y, fill = as.factor(IRI_forecast_march))) +
+  geom_raster(aes(x = x, y = y, fill = as.factor(forecast_values))) +
   coord_cartesian(ylim = c(-50, 90)) +
 coord_quickmap() +
   geom_sf(data = wrld_simpl_sf, 
@@ -58,6 +62,7 @@ coord_quickmap() +
 # Print seasonal map
 ggsave("Plots/Seasonal/seasonal_forecast.pdf", seasonal_plot, width = 10, height = 6.5)
 
+#------------------Generate map with exposure and coverage using seasonal forecast-------------------------------
 # Function to calculate cells above/below range (60 likelihood)
 ex <- raster::extract(t, wrld_simpl, 
               fun=function(x,...)(sum(na.omit(x) >= 3) / length(x)), 
@@ -80,7 +85,7 @@ join <- left_join(fortyhigh,
 
 # Calculate area coverage either wet or dry
 ex_cov <- join %>% 
-  mutate(Forecast = IRI_forecast_march.x + IRI_forecast_march.y) 
+  mutate(Forecast = forecast_values.x + forecast_values.y) 
 
 # Bind max coverage to world sf
 binding <- cbind(wrld_simpl_sf, ex_cov$Forecast)  
@@ -187,9 +192,13 @@ iri_stack <- stack(persist_shape, t, tr_reshape, land_calc)
 join_raster <- raster::overlay(
   iri_stack,
   fun = function(w, x, y, z) {
+    # Limits forecast to only places where there are people or agri
     return(ifelse((z == 1 | y >= 3) & (x >= 3 | x <= -3), x,
-                  ifelse((w == -3 | w == -4) & x >= -3, w, 
-                         ifelse((z == 1 | y >= 3) & (x < 3 & x > -3), 0, NA)
+                  # Includes persistence, only in places here there are people and agi
+                  ifelse(((w == -3 | w == -4) & (z == 1 | y >= 3)) & x >= -3 , w, 
+                         # Assigns 0 in all other places
+                         ifelse((z == 1 | y >= 3) & (x < 3 & x > -3), 0,
+                                NA)
                   )
     ))
   }
@@ -320,4 +329,20 @@ glob_plot <- ggplot(data) +
 
 ggsave("Plots/Seasonal/Global_plot.pdf", glob_plot, width = 10, height = 6.5)
 
+#-------------------------Create risk list for seasonal hazards-------------------------------------
+seasonal_risk_list <- iri_map %>% 
+  mutate(
+    Forecast = case_when(na$layer >= 0.8 & na_num$layer >= -30 ~ NA_real_,
+                         TRUE ~ Forecast),
+    risklevel = case_when(Forecast < 0.2 ~ 0,
+                          Forecast >= 0.2 & Forecast < 0.8 ~ 7,
+                          Forecast >= 0.8 ~ 10,
+                          TRUE ~ 0),
+    risklevel = as.factor(risklevel)
+  ) %>%
+  dplyr::select(ISO3, risklevel)
 
+st_geometry(seasonal_risk_list) <- NULL
+
+# Save csv
+write.csv(seasonal_risk_list, "Indicator_dataset/seasonal_risk_list")

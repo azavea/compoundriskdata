@@ -1,14 +1,14 @@
 ,Countryname,Country,FCV_status,IDA-status
-3,Afghanistan,AFG,High-Intensity Conflict,Yes
+3,Afghanistan,AFG,High-Intensity conflict,Yes
 44,Albania,ALB,NA,NA
 6,Algeria,DZA,NA,NA
 69,Angola,AGO,NA,NA
 45,Antigua and Barbuda,ATG,NA,NA
 46,Argentina,ARG,NA,NA
-27,Armenia,ARM,High-Intensity Conflict,NA
+27,Armenia,ARM,High-Intensity conflict,NA
 132,Australia,AUS,NA,NA
 133,Austria,AUT,NA,NA
-93,Azerbaijan,AZE,High-Intensity Conflict,NA
+93,Azerbaijan,AZE,High-Intensity conflict,NA
 70,Bahamas,BHS,NA,NA
 94,Bahrain,BHR,NA,NA
 95,Bangladesh,BGD,NA,Yes
@@ -155,7 +155,7 @@
 187,Slovakia,SVK,NA,NA
 159,Slovenia,SVN,NA,NA
 91,Solomon Islands,SLB,High-Institutional and Social Fragility,Yes
-25,Somalia,SOM,High-Intensity Conflict,Yes
+25,Somalia,SOM,High-Intensity conflict,Yes
 41,South Africa,ZAF,NA,NA
 9,South Sudan,SSD,Medium-Intensity conflict,Yes
 61,Spain,ESP,NA,NA
@@ -164,7 +164,7 @@
 62,Suriname,SUR,NA,NA
 160,Sweden,SWE,NA,NA
 161,Switzerland,CHE,NA,NA
-63,Syria,SYR,High-Intensity Conflict,Yes
+63,Syria,SYR,High-Intensity conflict,Yes
 42,Tajikistan,TJK,NA,Yes
 125,Tanzania,TZA,NA,Yes
 162,Thailand,THA,NA,NA
@@ -186,6 +186,6 @@
 131,Vanuatu,VUT,NA,Yes
 68,Venezuela,VEN,High-Institutional and Social Fragility,NA
 190,Viet Nam,VNM,NA,NA
-26,Yemen,YEM,High-Intensity Conflict,Yes
+26,Yemen,YEM,High-Intensity conflict,Yes
 43,Zambia,ZMB,NA,Yes
 17,Zimbabwe,ZWE,High-Institutional and Social Fragility,Yes
