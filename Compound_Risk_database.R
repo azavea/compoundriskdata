@@ -303,65 +303,7 @@ colnames(covidcurrent) <- c(
   "H_new_cases_smoothed_per_million_norm", "H_new_deaths_smoothed_per_million_norm"
 )
 
-# #—(Alternative COVID deaths)
-# # Load COVID data
-# cov <- read.csv("https://raw.githubusercontent.com/scc-usc/ReCOVER-COVID-19/master/results/forecasts/global_deaths_current_0.csv")
-# cov_current <- read.csv("https://raw.githubusercontent.com/scc-usc/ReCOVER-COVID-19/master/results/forecasts/global_deaths.csv")
-# 
-# # Summarise country totals (forecast)
-# cov_dat <- cov %>%
-#   dplyr::select(Country, colnames(cov)[10], colnames(cov)[9]) %>%
-#   rename(
-#     w8forecast = colnames(cov)[10], 
-#     w7forecast = colnames(cov)[9]
-#     ) %>%
-#   mutate(Country = suppressWarnings(countrycode(Country, 
-#                                                 origin = "country.name",
-#                                                 destination = "iso3c"
-#                                                 )
-#          )) %>%
-#   drop_na(Country)
-# 
-# # Summarise country totals (current)
-# cov_cur <- cov_current %>%
-#   dplyr::select(Country, last(colnames(cov_current))) %>%
-#   rename(
-#     current = last(colnames(cov_current)),
-#     ) %>%
-#   mutate(
-#     Country = suppressWarnings(countrycode(Country, 
-#                                                 origin = "country.name",
-#                                                 destination = "iso3c"
-#                                            )
-#       )) %>%
-#   drop_na(Country)
-# 
-# # Add population
-# pop <- wpp.by.year(wpp.indicator("tpop"), 2020)
-# 
-# pop$charcode <- suppressWarnings(countrycode(pop$charcode, 
-#                                              origin = "iso2c", 
-#                                              destination = "iso3c"
-#                                              )
-#                                  )
-# 
-# colnames(pop) <- c("Country", "Population")
-# 
-# # Join datasets
-# cov_forcast_alt <- left_join(cov_dat, pop, by = "Country", keep = F) %>%
-#   left_join(., cov_cur) %>%
-#   drop_na(Country) %>%
-#   mutate(
-#     week_increase = w8forecast - w7forecast,
-#     new_death_per_m = week_increase / (Population / 1000),
-#     add_death_prec_current = ((w8forecast / current) * 100) - 100
-#     ) %>%
-#   rename_with(.fn = ~ paste0("H_", .), 
-#               .cols = colnames(.)[-1]
-#               )
-# 
-# # Normalise
-# cov_forcast_alt <- normfuncpos(cov_forcast_alt, 100, 0, "H_add_death_prec_current")
+# CHANGE: Deleted commented code
 
 #--------------------------—Oxford Response Tracker----------------------------
 Oxres <- read.csv("https://raw.githubusercontent.com/OxCGRT/covid-policy-tracker/master/data/OxCGRT_latest.csv")
@@ -466,8 +408,10 @@ dons_text <- dons_select %>%
 wmo_don_full <- bind_cols(dons_text, dons_date) %>%
   rename(text = "...1" ,
           date = "...2") %>%
-  mutate(disease = trimws(sub("\\s[-——].*", "", text)),
-          country = trimws(sub(".*–", "", text)),
+  # CHANGE: Add new character to regex search because
+  # DONS keeps using new dash alternatives
+  mutate(disease = trimws(sub("\\s[-——ｰ].*", "", text)),
+          country = trimws(sub(".*[-——ｰ]", "", text)),
           country = trimws(sub(".*-", "", country)),
           date = dmy(date)) %>%
   separate_rows(country, sep = ",") %>%
@@ -901,7 +845,7 @@ socio_forward <- inform_covid_warning %>%
 #--------------------------—MPO: Poverty projections----------------------------------------------------
 # CHANGE: MPO data is now processed separately.
 # Now only need to read in the processed data.
-mpo_data <- read.csv("https://raw.githubusercontent.com/bennotkin/compoundriskdata/docker/Indicator_dataset/mpo.csv")
+  mpo_data <- read.csv(paste0(github, "Indicator_dataset/mpo.csv"))
 
 #-----------------------------—HOUSEHOLD HEATMAP FROM MACROFIN-------------------------------------
 # If Macro Fin Review is re-included above, we can reuse that. For clarity, moving data read here because it's not being used by macrosheet
@@ -948,9 +892,10 @@ phone_index_data <- read.csv(paste0(github, "Indicator_dataset/phone.csv"))
 imf_un <- read.csv(paste0(github, "Indicator_dataset/imf_unemployment.csv"))
 
 imf_un <- imf_un %>%
-  mutate_at(
-    vars(contains("X2")),
-    ~ as.numeric(as.character(.))
+# CHANGE: Functionally the same, but `mutate_at()` is now deprecated
+  mutate(across(
+    contains("X2"),
+    ~ as.numeric(as.character(.)))
   ) %>%
   mutate(change_unemp_21 = X2021 - X2020,
           change_unemp_20 = X2020 - X2019) %>%
@@ -1206,22 +1151,27 @@ print("Natural hazard sheet written")
 
 #-------------------------—FCS---------------------------------------------
 
-fcv <- read.csv(paste0(github, "Indicator_dataset/Country_classification.csv")) %>%
-  dplyr::select(-X, Countryname, -IDA.status) %>%
-  mutate(
-    FCV_normalised = case_when(
-      FCV_status == "High-Intensity conflict" ~ 10,
-      FCV_status == "Medium-Intensity conflict" ~ 10,
-      FCV_status == "High-Institutional and Social Fragility" ~ 10,
-      TRUE ~ 0
+  fcv <- read.csv(paste0(github, "Indicator_dataset/Country_classification.csv")) %>%
+    dplyr::select(-X, Countryname, -IDA.status) %>%
+    # CHANGE: Make the FCV_status column lower-case so that differences in case don't
+    # prevent matches. Previously, if the FCV_Status was "High-intensity conflict" it would
+    # be marked as 0
+    mutate(FCV_status = tolower(FCV_status)) %>%
+    mutate(
+      FCV_normalised = case_when(
+        FCV_status == tolower("High-Intensity conflict") ~ 10,
+        FCV_status == tolower("Medium-Intensity conflict") ~ 10,
+        FCV_status == tolower("High-Institutional and Social Fragility") ~ 10,
+        TRUE ~ 0
+      )
     )
-  )
 
 #-----------------------------—IDPs--------------------------------------------------------
 idp_data <- read_csv(paste0(github, "Indicator_dataset/population.csv"),
                       col_types = cols(
                         `IDPs of concern to UNHCR` = col_number(),
-                        `Refugees under UNHCR’s mandate` = col_number(),
+                        # CHANGE: Newer dataset doesn't use apostrophe s in column name
+                        `Refugees under UNHCR mandate` = col_number(),
                         Year = col_number()
                       ), skip = 14
 )
@@ -1230,7 +1180,7 @@ idp_data <- read_csv(paste0(github, "Indicator_dataset/population.csv"),
 idp <- idp_data %>%
   group_by(`Country of origin (ISO)`, Year) %>%
   summarise(
-    refugees = sum(`Refugees under UNHCR’s mandate`, na.rm = T),
+    refugees = sum(`Refugees under UNHCR mandate`, na.rm = T),
     idps = sum(`IDPs of concern to UNHCR`, na.rm = T)
   ) %>%
   group_by(`Country of origin (ISO)`) %>%
@@ -1342,8 +1292,9 @@ acled <- acled %>%
     ),
     fatal_z_norm = case_when(
       fatal_3_month_log == 0 ~ 0,
-      (fatal_3_month_log <= log(5 + 1) & fatal_3_month_log != 0 ) & fatal_z <= 1 ~ 0,
-      (fatal_3_month_log <= log(5 + 1) & fatal_3_month_log != 0 ) & fatal_z >= 1 ~ 5,
+      # CHANGE: Methodology change. We now only care if `fatal_3_month_log` is less than log(6)
+      # There is no longer a case when we assign a value of 5.
+      fatal_3_month_log <= log(5 + 1) ~ 0,
       TRUE ~ fatal_z_norm
     )
   ) %>%
@@ -1352,7 +1303,6 @@ acled <- acled %>%
 
 #--------------------------—REIGN--------------------------------------------
 # CHANGE: Code looks for most recent REIGN dataset, so it doesn't need to be manually updated
-# reign_data <- suppressMessages(read_csv("https://cdn.rawgit.com/OEFDataScience/REIGN.github.io/gh-pages/data_sets/REIGN_2021_5.csv", col_types = cols()))
 
 month <- as.numeric(format(Sys.Date(),"%m"))
 year <- as.numeric(format(Sys.Date(),"%Y"))
@@ -1362,7 +1312,8 @@ i <- 0
 while(l == F & i < 20) {
   tryCatch(
     {
-      reign_data <- suppressMessages(read_csv(paste0("https://cdn.rawgit.com/OEFDataScience/REIGN.github.io/gh-pages/data_sets/REIGN_", year, "_", month, ".csv"),
+    # CHANGE: New URL. August file was too large for the previous URL
+    reign_data <- suppressMessages(read_csv(paste0("https://raw.githubusercontent.com/OEFDataScience/REIGN.github.io/gh-pages/data_sets/REIGN_", year, "_", month, ".csv"),
                                               col_types = cols()))
       l <- T
       print(paste0("Found REIGN csv at ", year, "-", month))
