@@ -806,7 +806,8 @@ print("Macro sheet written")
 #
 
 #---------------------------—Alternative socio-economic data (based on INFORM)
-inform_2021 <- suppressMessages(read_csv(paste0(github, "Indicator_dataset/INFORM_2021.csv"), col_types = cols()))
+# INFORM dataset is updated to the 2022 version. I'm now naming all current INFORM files as INFORM_Risk
+inform_risk <- suppressMessages(read_csv(paste0(github, "Indicator_dataset/INFORM_Risk.csv"), col_types = cols()))
 
 inform_data <- inform_2021 %>%
   dplyr::select(Country, "Socio-Economic Vulnerability") %>%
