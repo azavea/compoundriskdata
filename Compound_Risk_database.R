@@ -19,7 +19,6 @@ librarian::shelf(
 github <- "https://raw.githubusercontent.com/bennotkin/compoundriskdata/master/"
 # github <- "https://raw.githubusercontent.com/ljonestz/compoundriskdata/master/"
 
-{
 #--------------------FUNCTION TO CALCULATE NORMALISED SCORES-----------------
 # Function to normalise with upper and lower bounds (when low score = high vulnerability)
 normfuncneg <- function(df, upperrisk, lowerrisk, col1) {
@@ -599,25 +598,28 @@ ag_ob <- ag_ob_data %>%
   dplyr::select(-Income.Level, -Color.Bin, -X) %>%
   group_by(Country) %>%
   summarise(
-    # CHANGE: Adding Dec 2020 – Feb 2021 to account for new data
-    Mar = Mar.20[which(!is.na(Mar.20))[1]],
-    Apr = Apr.20[which(!is.na(Apr.20))[1]],
-    May = May.20[which(!is.na(May.20))[1]],
-    June = Jun.20[which(!is.na(Jun.20))[1]],
-    Jul = Jul.20[which(!is.na(Jul.20))[1]],
-    Aug = Aug.20[which(!is.na(Aug.20))[1]],
+    # CHANGE: Adding Dec 2020 – Aug 2021 to account for new data
     Sep = Sep.20[which(!is.na(Sep.20))[1]],
     Oct = Oct.20[which(!is.na(Oct.20))[1]],
     Nov = Nov.20[which(!is.na(Nov.20))[1]],
     Dec = Dec.20[which(!is.na(Dec.20))[1]],
     Jan = Jan.21[which(!is.na(Jan.21))[1]],
-    Feb = Feb.21[which(!is.na(Feb.21))[1]]
+    Feb = Feb.21[which(!is.na(Feb.21))[1]],
+    Mar = Mar.20[which(!is.na(Mar.21))[1]],
+    Apr = Apr.21[which(!is.na(Apr.21))[1]],
+    May = May.21[which(!is.na(May.21))[1]],
+    June = Jun.21[which(!is.na(Jun.21))[1]],
+    Jul = Jul.21[which(!is.na(Jul.21))[1]],
+    Aug = Aug.21[which(!is.na(Aug.21))[1]]
   ) %>%
   mutate(fpv = case_when(
     # CHANGE: Updating which months to look at
-    !is.na(Feb) ~ Feb,
-    is.na(Feb) & !is.na(Jan) ~ Jan,
-    is.na(Feb) & is.na(Jan) & !is.na(Dec) ~ Nov,
+    !is.na(Aug) ~ Aug,
+    is.na(Aug) & !is.na(Jul) ~ Jul,
+    is.na(Aug) & is.na(Jul) & !is.na(Jun) ~ Jun,
+    !is.na(May) ~ May,
+    !is.na(Apr) ~ Apr,
+    !is.na(Mar) ~ Mar
     TRUE ~ NA_real_
   ),
   fpv_rating = case_when(
@@ -1303,35 +1305,9 @@ acled <- acled %>%
   dplyr::select(-iso3)
 
 #--------------------------—REIGN--------------------------------------------
-# CHANGE: Code looks for most recent REIGN dataset, so it doesn't need to be manually updated
-
-month <- as.numeric(format(Sys.Date(),"%m"))
-year <- as.numeric(format(Sys.Date(),"%Y"))
-
-l <- F
-i <- 0
-while(l == F & i < 20) {
-  tryCatch(
-    {
     # CHANGE: New URL. August file was too large for the previous URL
-    reign_data <- suppressMessages(read_csv(paste0("https://raw.githubusercontent.com/OEFDataScience/REIGN.github.io/gh-pages/data_sets/REIGN_", year, "_", month, ".csv"),
+    reign_data <- suppressMessages(read_csv(paste0("https://raw.githubusercontent.com/OEFDataScience/REIGN.github.io/gh-pages/data_sets/REIGN_2021_8.csv"),
                                               col_types = cols()))
-      l <- T
-      print(paste0("Found REIGN csv at ", year, "-", month))
-    }, error = function(e) {
-      print(paste0("No REIGN csv for ", year, "-", month))
-    }, warning = function(w) {
-    }, finally = {
-    }
-  )
-  if(month > 1) {
-    month <- month - 1
-  } else {
-    month <- 12
-    year <- year - 1
-  }
-  i <- i + 1
-}
 
 reign_start <- reign_data %>%
   filter(year == max(year, na.rm= T)) %>%
@@ -1400,5 +1376,4 @@ write.csv(fragility_sheet, "Risk_sheets/fragilitysheet.csv")
 print("Fragility sheet written")
 
 # CHANGE: Secondary output sheets are now written in a separate file.
-# Can remain included if needed.
-}
+# Can remain included if needed, though shouldn't be necessary for Azavea

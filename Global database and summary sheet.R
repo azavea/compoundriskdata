@@ -22,6 +22,10 @@ librarian::shelf(
 ##
 #
 
+# CHANGE: Saving URL string as a variable, to more easily redirect CRM GitHub links
+# This is the reason for all of the `read.csv(paste0(github, ...))` changes
+github <- "https://raw.githubusercontent.com/bennotkin/compoundriskdata/master/"
+
 # Load risk sheets
 healthsheet <- read.csv(paste0(github, "Risk_sheets/healthsheet.csv"))[,-1] # drops first column, X, which is row number
 foodsecurity <- read.csv(paste0(github, ("Risk_sheets/foodsecuritysheet.csv"))[,-1]
@@ -33,9 +37,10 @@ countrylist <- read.csv(paste0(github, "Indicator_dataset/countrylist.csv"))[,-1
 # Join datasets
 # — `globalrisk` ----
 globalrisk <- left_join(countrylist, healthsheet, by = c("Countryname", "Country")) %>%
+  # CHANGE: Join is now only on `Country` column, not on `Country` and `Countryname` columns
   left_join(., foodsecurity, by = c("Country")) %>%
   # left_join(., debtsheet, by = c("Countryname", "Country")) %>%
-  left_join(., fragilitysheet, by = c("Country")) %>% # Removed Countryname because the column was missing
+  # Removed Countryname because the column was missing
   left_join(., fragilitysheet, by = c("Country")) %>%
   left_join(., macrosheet, by = c("Countryname", "Country")) %>%
   left_join(., Naturalhazardsheet, by = c("Countryname", "Country")) %>%
