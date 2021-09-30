@@ -608,7 +608,7 @@ ag_ob <- ag_ob_data %>%
     Mar = Mar.20[which(!is.na(Mar.21))[1]],
     Apr = Apr.21[which(!is.na(Apr.21))[1]],
     May = May.21[which(!is.na(May.21))[1]],
-    June = Jun.21[which(!is.na(Jun.21))[1]],
+    Jun = Jun.21[which(!is.na(Jun.21))[1]],
     Jul = Jul.21[which(!is.na(Jul.21))[1]],
     Aug = Aug.21[which(!is.na(Aug.21))[1]]
   ) %>%
@@ -617,9 +617,6 @@ ag_ob <- ag_ob_data %>%
     !is.na(Aug) ~ Aug,
     is.na(Aug) & !is.na(Jul) ~ Jul,
     is.na(Aug) & is.na(Jul) & !is.na(Jun) ~ Jun,
-    !is.na(May) ~ May,
-    !is.na(Apr) ~ Apr,
-    !is.na(Mar) ~ Mar
     TRUE ~ NA_real_
   ),
   fpv_rating = case_when(
