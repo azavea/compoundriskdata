@@ -637,8 +637,9 @@ ag_ob <- ag_ob_data %>%
   )
 
 #-------------------------—FAO/WFP HOTSPOTS----------------------------
-fao_wfp <- suppressWarnings(read_csv(paste0(github, "Indicator_dataset/WFP%3AFAO_food.csv"), col_types = cols()) %>%
-                              dplyr::select(-X2))
+# CHANGE: Instead of deleting second column, selecting first column
+# This should resolve the issue discussed in email on 10/12/21
+fao_wfp <- read_csv(paste0(github, "Indicator_dataset/WFP%3AFAO_food.csv"), col_types = cols())[,1]
 
 fao_wfp <- fao_wfp %>%
   mutate(Country = countrycode(Country,
@@ -805,10 +806,10 @@ print("Macro sheet written")
 #
 
 #---------------------------—Alternative socio-economic data (based on INFORM)
-# INFORM dataset is updated to the 2022 version. I'm now naming all current INFORM files as INFORM_Risk
+# CHANGE: INFORM dataset is updated to the 2022 version. I'm now naming all current INFORM files as INFORM_Risk
 inform_risk <- suppressMessages(read_csv(paste0(github, "Indicator_dataset/INFORM_Risk.csv"), col_types = cols()))
 
-inform_data <- inform_2021 %>%
+inform_data <- inform_risk %>%
   dplyr::select(Country, "Socio-Economic Vulnerability") %>%
   rename(S_INFORM_vul = "Socio-Economic Vulnerability")
 
@@ -1093,11 +1094,11 @@ gdac <- gdac %>%
 write.csv(gdac, "Indicator_dataset/gdaclistnormalised.csv")
 
 #----------------------—INFORM Natural Hazard and Exposure rating--------------------------
-
-inform_2021 <- read.csv(paste0(github, "Indicator_dataset/INFORM_2021.csv"))
+# CHANGE: INFORM dataset is updated to the 2022 version. I'm now naming all current INFORM files as INFORM_Risk
+inform_risk <- read.csv(paste0(github, "Indicator_dataset/INFORM_Risk.csv"))
 
 # Rename country
-informnathaz <- inform_2021 %>%
+informnathaz <- inform_risk %>%
   dplyr::select(Country, Natural) %>%
   rename(NH_Hazard_Score = Natural) %>%
   drop_na(Country, NH_Hazard_Score)
@@ -1234,72 +1235,77 @@ idp <- idp %>%
   dplyr::select(-`Country of origin (ISO)`)
 
 #-------------------------—ACLED data---------------------------------------------
-# Select date as three years plus two month (date to retrieve ACLED data)
-three_year <- as.Date(as.yearmon(Sys.Date() - 45) - 3.2)
+# CHANGE: We are currently unable to download any more data from ACLED.
+# We are instead using a static file saved on github. If we ar allowed to 
+# download from ACLED again, the commented code should work.
+acled <- read.csv(https://raw.githubusercontent.com/bennotkin/compoundriskdata/forAzavea/Indicator_dataset/acled-paused.csv")
 
-# Get ACLED API URL
-acled_url <- paste0("https://api.acleddata.com/acled/read/?key=*9t-89Rn*bDb4qFXBAmO&email=ljones12@worldbank.org&event_date=",
-                    three_year,
-                    "&event_date_where=>&fields=iso3|fatalities|event_date&limit=0")
-
-# #Get ACLED API URL
-# acled_url <- paste0("https://api.acleddata.com/acled/read/?key=buJ7jaXjo71EBBB!!PmJ&email=bnotkin@worldbank.org&event_date=",
+# # Select date as three years plus two month (date to retrieve ACLED data)
+# three_year <- as.Date(as.yearmon(Sys.Date() - 45) - 3.2)
+# 
+# # Get ACLED API URL
+# acled_url <- paste0("https://api.acleddata.com/acled/read/?key=*9t-89Rn*bDb4qFXBAmO&email=ljones12@worldbank.org&event_date=",
 #                     three_year,
 #                     "&event_date_where=>&fields=iso3|fatalities|event_date&limit=0")
-
-# Retrieve information
-acled_data <- fromJSON(acled_url)
-
-# Progress conflict data
-acled <- acled_data$data %>%
-  mutate(
-    fatalities = as.numeric(as.character(fatalities)),
-    date = as.Date(event_date),
-    month_yr = as.yearmon(date)
-  ) %>%
-  # Remove dates for the latest month (or month that falls under the prior 6 weeks)
-  # CHANGE: Putting `date` variable into year-month format to compare with system date, in year-month format
-  filter(as.Date(as.yearmon(date)) <= as.Date(as.yearmon(Sys.Date() - 45))) %>% 
-  group_by(iso3, month_yr) %>%
-  summarise(fatal_month = sum(fatalities, na.rm = T),
-            fatal_month_log = log(fatal_month + 1)) %>%
-  mutate(fatal_3_month = fatal_month + lag(fatal_month, na.rm= T) + lag(fatal_month, 2, na.rm= T),
-          fatal_3_month_log = log(fatal_3_month + 1)) %>%
-  group_by(iso3) %>%
-  mutate(
-    fatal_z = (fatal_3_month_log - mean(fatal_3_month_log, na.rm = T)) / sd(fatal_3_month_log, na.rm = T),
-    sd = sd(fatal_3_month_log, na.rm = T),
-    mean = mean(fatal_3_month_log, na.rm = T)
-  ) %>%
-  #Calculate month year based on present month (minus 6 weeks)
-  filter(month_yr == paste(month.abb[month(format(Sys.Date() - 45))], year(format(Sys.Date() - 45)))) 
-
-# Normalise scores
-acled <- normfuncpos(acled, 1, -1, "fatal_z")
-
-# Correct for countries with 0
-acled <- acled %>%
-  mutate(
-    fatal_z_norm = case_when(
-      is.nan(fatal_z) ~ 0,
-      TRUE ~ fatal_z_norm
-    ),
-    Country = countrycode(
-      iso3,
-      origin = "country.name",
-      destination = "iso3c",
-      nomatch = NULL
-    ),
-    fatal_z_norm = case_when(
-      fatal_3_month_log == 0 ~ 0,
-      # CHANGE: Methodology change. We now only care if `fatal_3_month_log` is less than log(6)
-      # There is no longer a case when we assign a value of 5.
-      fatal_3_month_log <= log(5 + 1) ~ 0,
-      TRUE ~ fatal_z_norm
-    )
-  ) %>%
-  ungroup() %>%
-  dplyr::select(-iso3)
+# 
+# # #Get ACLED API URL
+# # acled_url <- paste0("https://api.acleddata.com/acled/read/?key=buJ7jaXjo71EBBB!!PmJ&email=bnotkin@worldbank.org&event_date=",
+# #                     three_year,
+# #                     "&event_date_where=>&fields=iso3|fatalities|event_date&limit=0")
+# 
+# # Retrieve information
+# acled_data <- fromJSON(acled_url)
+# 
+# # Progress conflict data
+# acled <- acled_data$data %>%
+#   mutate(
+#     fatalities = as.numeric(as.character(fatalities)),
+#     date = as.Date(event_date),
+#     month_yr = as.yearmon(date)
+#   ) %>%
+#   # Remove dates for the latest month (or month that falls under the prior 6 weeks)
+#   # CHANGE: Putting `date` variable into year-month format to compare with system date, in year-month format
+#   filter(as.Date(as.yearmon(date)) <= as.Date(as.yearmon(Sys.Date() - 45))) %>% 
+#   group_by(iso3, month_yr) %>%
+#   summarise(fatal_month = sum(fatalities, na.rm = T),
+#             fatal_month_log = log(fatal_month + 1)) %>%
+#   mutate(fatal_3_month = fatal_month + lag(fatal_month, na.rm= T) + lag(fatal_month, 2, na.rm= T),
+#           fatal_3_month_log = log(fatal_3_month + 1)) %>%
+#   group_by(iso3) %>%
+#   mutate(
+#     fatal_z = (fatal_3_month_log - mean(fatal_3_month_log, na.rm = T)) / sd(fatal_3_month_log, na.rm = T),
+#     sd = sd(fatal_3_month_log, na.rm = T),
+#     mean = mean(fatal_3_month_log, na.rm = T)
+#   ) %>%
+#   #Calculate month year based on present month (minus 6 weeks)
+#   filter(month_yr == paste(month.abb[month(format(Sys.Date() - 45))], year(format(Sys.Date() - 45)))) 
+# 
+# # Normalise scores
+# acled <- normfuncpos(acled, 1, -1, "fatal_z")
+# 
+# # Correct for countries with 0
+# acled <- acled %>%
+#   mutate(
+#     fatal_z_norm = case_when(
+#       is.nan(fatal_z) ~ 0,
+#       TRUE ~ fatal_z_norm
+#     ),
+#     Country = countrycode(
+#       iso3,
+#       origin = "country.name",
+#       destination = "iso3c",
+#       nomatch = NULL
+#     ),
+#     fatal_z_norm = case_when(
+#       fatal_3_month_log == 0 ~ 0,
+#       # CHANGE: Methodology change. We now only care if `fatal_3_month_log` is less than log(6)
+#       # There is no longer a case when we assign a value of 5.
+#       fatal_3_month_log <= log(5 + 1) ~ 0,
+#       TRUE ~ fatal_z_norm
+#     )
+#   ) %>%
+#   ungroup() %>%
+#   dplyr::select(-iso3)
 
 #--------------------------—REIGN--------------------------------------------
     # CHANGE: New URL. August file was too large for the previous URL
