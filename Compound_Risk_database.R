@@ -1238,7 +1238,7 @@ idp <- idp %>%
 # CHANGE: We are currently unable to download any more data from ACLED.
 # We are instead using a static file saved on github. If we ar allowed to 
 # download from ACLED again, the commented code should work.
-acled <- read.csv(https://raw.githubusercontent.com/bennotkin/compoundriskdata/forAzavea/Indicator_dataset/acled-paused.csv")
+acled <- read.csv("https://raw.githubusercontent.com/bennotkin/compoundriskdata/forAzavea/Indicator_dataset/acled-paused.csv")
 
 # # Select date as three years plus two month (date to retrieve ACLED data)
 # three_year <- as.Date(as.yearmon(Sys.Date() - 45) - 3.2)
