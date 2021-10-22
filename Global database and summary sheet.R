@@ -77,7 +77,7 @@ github <- "https://raw.githubusercontent.com/bennotkin/compoundriskdata/master/"
 
 # Load risk sheets
 healthsheet <- read.csv(paste0(github, "Risk_sheets/healthsheet.csv"))[,-1] # drops first column, X, which is row number
-foodsecurity <- read.csv(paste0(github, ("Risk_sheets/foodsecuritysheet.csv"))[,-1]
+foodsecurity <- read.csv(paste0(github, "Risk_sheets/foodsecuritysheet.csv"))[,-1]
 fragilitysheet <- read.csv(paste0(github, "Risk_sheets/fragilitysheet.csv"))[,-1]
 macrosheet <- read.csv(paste0(github, "Risk_sheets/macrosheet.csv"))[,-1]
 Naturalhazardsheet <- read.csv(paste0(github, "Risk_sheets/Naturalhazards.csv"))[,-1]
