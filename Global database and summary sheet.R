@@ -8,10 +8,10 @@
 # LOAD PACKAGES ----
 # install.packages("librarian")     #Run if librarian is not already installed
 librarian::shelf(
-  ggplot2, lubridate, rvest, dplyr, 
-  countrycode, sjmisc, EnvStats, jsonlite,
-  matrixStats, readr, readxl, curl, stats,
-  rmarkdown,  stringr, tidyr, xml2, zoo
+  ggplot2, lubridate, rvest, dplyr, countrycode, sjmisc, EnvStats, jsonlite,
+  matrixStats, readr, readxl, curl, stats, rmarkdown, stringr, tidyr, xml2, zoo,
+  ggplot2, cowplot, compositions, viridis, clipr, awalker89 / openxlsx, gsheet,
+  tidyverse
 )
 {
 #
