@@ -651,7 +651,7 @@ reliabilitysheet <- globalrisk %>%
                                                          )),
                                                  na.rm = T
     ) / 2,
-    EMERGING_RISK_SOCIOECONOMIC_VULNERABILITY = rowSums(is.na(globalrisk %>%
+    RELIABILITY_EMERGING_SOCIOECONOMIC_VULNERABILITY = rowSums(is.na(globalrisk %>%
                                                                 dplyr::select(
                                                                   S_pov_comb_norm,
                                                                   S_change_unemp_norm,
@@ -695,7 +695,7 @@ reliabilitysheet <- reliabilitysheet %>%
     RELIABILITY_EXISTING_MACRO_FISCAL, RELIABILITY_EXISTING_SOCIOECONOMIC_VULNERABILITY,
     RELIABILITY_EXISTING_NATURAL_HAZARDS, RELIABILITY_EXISTING_FRAGILITY_INSTITUTIONS,
     RELIABILITY_EMERGING_HEALTH, RELIABILITY_EMERGING_FOOD_SECURITY,
-    EMERGING_RISK_SOCIOECONOMIC_VULNERABILITY, RELIABILITY_EMERGING_MACRO_FISCAL,
+    RELIABILITY_EMERGING_SOCIOECONOMIC_VULNERABILITY, RELIABILITY_EMERGING_MACRO_FISCAL,
     RELIABILITY_EMERGING_NATURAL_HAZARDS, RELIABILITY_EMERGING_FRAGILITY_INSTITUTIONS
   ) %>%
   arrange(Country)
