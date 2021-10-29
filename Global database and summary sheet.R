@@ -61,28 +61,6 @@ Socioeconomic_sheet <- read_risk_sheet("Socioeconomic_sheet.csv")
 countrylist <- read.csv(file.path(data_read_root, "countrylist.csv")) %>%
   select(Country, Countryname)
 
-
-# # Load risk sheets
-# healthsheet <- read.csv("Risk_sheets/healthsheet.csv")[,-1] # drops first column, X, which is row number
-# foodsecurity <- read.csv("Risk_sheets/foodsecuritysheet.csv")[,-1]
-# fragilitysheet <- read.csv("Risk_sheets/fragilitysheet.csv")[,-1]
-# macrosheet <- read.csv("Risk_sheets/macrosheet.csv")[,-1]
-# Naturalhazardsheet <- read.csv("Risk_sheets/Naturalhazards.csv")[,-1]
-# Socioeconomic_sheet <- read.csv("Risk_sheets/Socioeconomic_sheet.csv")[,-1]
-# countrylist <- read.csv("Indicator_dataset/countrylist.csv")[,-1]
-
-# CHANGE: Saving URL string as a variable, to more easily redirect CRM GitHub links
-# This is the reason for all of the `read.csv(paste0(github, ...))` changes
-github <- "https://raw.githubusercontent.com/bennotkin/compoundriskdata/master/"
-
-# Load risk sheets
-healthsheet <- read.csv(paste0(github, "Risk_sheets/healthsheet.csv"))[,-1] # drops first column, X, which is row number
-foodsecurity <- read.csv(paste0(github, "Risk_sheets/foodsecuritysheet.csv"))[,-1]
-fragilitysheet <- read.csv(paste0(github, "Risk_sheets/fragilitysheet.csv"))[,-1]
-macrosheet <- read.csv(paste0(github, "Risk_sheets/macrosheet.csv"))[,-1]
-Naturalhazardsheet <- read.csv(paste0(github, "Risk_sheets/Naturalhazards.csv"))[,-1]
-Socioeconomic_sheet <- read.csv(paste0(github, "Risk_sheets/Socioeconomic_sheet.csv"))[,-1]
-countrylist <- read.csv(paste0(github, "Indicator_dataset/countrylist.csv"))[,-1]
 # Join datasets
 # — `globalrisk` ----
 globalrisk <- left_join(countrylist, healthsheet, by = c("Countryname", "Country")) %>%
